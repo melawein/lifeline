@@ -10,10 +10,43 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_30_134309) do
+ActiveRecord::Schema.define(version: 2019_06_30_141518) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "days", force: :cascade do |t|
+    t.integer "sleep_hours"
+    t.date "date"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_days_on_user_id"
+  end
+
+  create_table "exercises", force: :cascade do |t|
+    t.integer "time"
+    t.bigint "day_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["day_id"], name: "index_exercises_on_day_id"
+  end
+
+  create_table "moods", force: :cascade do |t|
+    t.string "feeling"
+    t.bigint "day_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["day_id"], name: "index_moods_on_day_id"
+  end
+
+  create_table "pains", force: :cascade do |t|
+    t.string "symptom"
+    t.bigint "day_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["day_id"], name: "index_pains_on_day_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -31,4 +64,8 @@ ActiveRecord::Schema.define(version: 2019_06_30_134309) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "days", "users"
+  add_foreign_key "exercises", "days"
+  add_foreign_key "moods", "days"
+  add_foreign_key "pains", "days"
 end
