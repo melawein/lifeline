@@ -1,16 +1,12 @@
 Rails.application.routes.draw do
-  get 'stats/index'
-  get 'pains/new'
-  get 'pains/create'
-  get 'moods/new'
-  get 'moods/create'
-  get 'exercises/new'
-  get 'exercises/create'
-  get 'days/index'
-  get 'days/show'
-  get 'days/edit'
-  get 'days/update'
+
   devise_for :users
+
+  resources :days, only: [:index, :show, :edit, :update]
+  resources :moods, only: [:new, :create]
+  resources :pains, only: [:new, :create]
+  resources :exercises, only: [:new, :create]
+  resources :stats, only: [:index]
   root to: 'pages#home'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
