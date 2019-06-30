@@ -4,7 +4,7 @@ class Day < ApplicationRecord
   has_manyy :moods
   has_many :pains
 
-  HOURS = [0-3, 3-6, 6-9, 9+]
+  HOURS = (0..12).to_a
 
   validates :sleep_hours, inclusion: { in: HOURS }, presence: true
 
