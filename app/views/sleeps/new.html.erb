@@ -1,0 +1,8 @@
+<h1>Check in</h1>
+<p>How many hours have you slept today?</p>
+
+  <%= simple_form_for(@sleep) do |f| %>
+  <%= select_tag :hours, options_for_select(Sleep::HOURS) %>
+    <%= date_select("day", "date") %>
+    <%= f.submit %>
+  <% end %>
