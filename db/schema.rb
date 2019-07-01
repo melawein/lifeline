@@ -10,13 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_30_141518) do
+ActiveRecord::Schema.define(version: 2019_07_01_110014) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "days", force: :cascade do |t|
-    t.integer "sleep_hours"
     t.date "date"
     t.bigint "user_id"
     t.datetime "created_at", null: false
@@ -48,6 +47,14 @@ ActiveRecord::Schema.define(version: 2019_06_30_141518) do
     t.index ["day_id"], name: "index_pains_on_day_id"
   end
 
+  create_table "sleeps", force: :cascade do |t|
+    t.integer "hours"
+    t.bigint "day_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["day_id"], name: "index_sleeps_on_day_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -68,4 +75,5 @@ ActiveRecord::Schema.define(version: 2019_06_30_141518) do
   add_foreign_key "exercises", "days"
   add_foreign_key "moods", "days"
   add_foreign_key "pains", "days"
+  add_foreign_key "sleeps", "days"
 end

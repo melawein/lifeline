@@ -1,2 +1,8 @@
-<h1>Pains#new</h1>
-<p>Find me in app/views/pains/new.html.erb</p>
+<h1>Check in</h1>
+
+<p>Are you feeling any pain today?</p>
+
+
+  <%= select_tag :symptom, options_for_select(Pain::SYMPTOMS), options: {value:  params[:feeling]}, multiple: true ,
+  class: "form-control search-bar" %>
+  <%= submit_tag %>
