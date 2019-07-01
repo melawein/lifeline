@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   resources :moods, only: [:new, :create]
   resources :pains, only: [:new, :create]
   resources :exercises, only: [:new, :create]
+  resources :sleeps, only: [:new, :create]
   resources :stats, only: [:index]
   root to: 'pages#home'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

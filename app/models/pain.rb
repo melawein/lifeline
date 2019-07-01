@@ -3,5 +3,5 @@ class Pain < ApplicationRecord
 
   SYMPTOMS = ["Head", "Stomach", "Back", "Chest"]
 
-  validates :pain, inclusion: { in: SYMPTOMS }, presence: true
+  validates :symptom, inclusion: { in: SYMPTOMS }, presence: true
 end

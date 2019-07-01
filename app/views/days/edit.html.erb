@@ -1,6 +1,0 @@
-<h1>Check in</h1>
-<p>How long did you sleep last night?</p>
-
-  <%= select_tag :sleep_hours, options_for_select(Day::HOURS) options: {value:  params[:sleep_hours]},
-  class: "form-control search-bar" %>
-  <%= submit_tag %>
