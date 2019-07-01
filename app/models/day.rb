@@ -7,6 +7,6 @@ class Day < ApplicationRecord
 
   HOURS = (0..12).to_a
 
-  validates :sleep_hours, inclusion: { in: HOURS }, presence: true
+
 
 end

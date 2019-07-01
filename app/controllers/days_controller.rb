@@ -1,6 +1,11 @@
 class DaysController < ApplicationController
   def index
-    # @calendar = ::EventCal::Calendar.new(Date.today)
+    @moods = Mood.all
+    @exercises = Exercise.all
+    @pains = Pain.all
+    @sleeps = Sleep.all
+    @events = @moods + @exercises + @pains + @sleeps
+    @days = Day.all
   end
 
   def show
