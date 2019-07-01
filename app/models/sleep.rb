@@ -6,4 +6,7 @@ class Sleep < ApplicationRecord
 
   validates :hours, inclusion: { in: HOURS }, presence: true
 
+def start_time
+        self.day.date
+    end
 end

@@ -2,7 +2,12 @@ Rails.application.routes.draw do
 
   devise_for :users
 
-  resources :days, only: [:index, :show, :edit, :update]
+  resources :days, only: [:index, :show, :edit, :update] do
+    collection do
+      get ':year/:month/:date' => 'my_calendar#show', :constraints => { :year => /\d{4}/, :month => /\d{1,2}/, :day => /\d{1,2}/ }
+    end
+  end
+
   resources :moods, only: [:new, :create]
   resources :pains, only: [:new, :create]
   resources :exercises, only: [:new, :create]

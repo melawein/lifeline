@@ -5,4 +5,8 @@ class Exercise < ApplicationRecord
 
   validates :time, inclusion: { in: TIME }, presence: true
 
+  def start_time
+        self.day.date
+    end
+
 end

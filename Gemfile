@@ -15,6 +15,8 @@ gem 'sassc-rails'
 gem 'simple_form'
 gem 'uglifier'
 gem 'webpacker'
+gem "simple_calendar", "~> 2.0"
+gem 'event_cal', '~> 2.0', '>= 2.0.2'
 
 group :development do
   gem 'web-console', '>= 3.3.0'

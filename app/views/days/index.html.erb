@@ -2,3 +2,24 @@
 
 
 
+<%= month_calendar(events: @events) do |date, events| %>
+  <%= date.day %>
+<div class="d-flex justify-content-between">
+  <% events.each do |event| %>
+    <div>
+      <% if event.is_a?(Mood) %>
+      <div class="mood-event"></div>
+      <% elsif event.is_a?(Exercise) %>
+     <div class="exercise-event"></div>
+      <% elsif event.is_a?(Pain) %>
+      <div class="pain-event"></div>
+      <% elsif event.is_a?(Sleep) %>
+      <div class="sleep-event"></div>
+      <% end %>
+    </div>
+  <% end %>
+
+<% end %>
+
+
+
