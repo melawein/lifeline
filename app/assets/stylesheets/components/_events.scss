@@ -1,7 +1,7 @@
 .mood-event {
     width: 10px;
     height: 10px;
-    background-color: blue;
+    background-color: $mood;
     border-radius: 50%;
   }
 
@@ -9,7 +9,7 @@
   .exercise-event {
     width: 10px;
     height: 10px;
-    background-color: green;
+    background-color: $exercise;
     border-radius: 50%;
 
   }
@@ -17,7 +17,7 @@
   .pain-event {
     width: 10px;
     height: 10px;
-    background-color: red;
+    background-color: $pain;
     border-radius: 50%;
 
   }
@@ -25,7 +25,7 @@
   .sleep-event {
     width: 10px;
     height: 10px;
-    background-color: orange;
+    background-color: $sleep;
     border-radius: 50%;
 
   }
