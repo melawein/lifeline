@@ -7,17 +7,23 @@ class MoodsController < ApplicationController
     # @mood = Mood.new(feeling: params[:feeling])
     feelings = params[:feeling]
 
+    date = Date.new(params["day"]["date(1i)"].to_i, params["day"]["date(2i)"].to_i, params["day"]["date(3i)"].to_i)
+
+    day = Day.find_by(date: date)
+    day = Day.create(date: date, user: current_user) if day.nil?
     # does day exist?
     # if yes .. find day .. if no create day
     feelings.each do |feeling|
-      Mood.create(feeling: feeling, day: Day.first)
+      Mood.create(feeling: feeling, day: day)
+    end
 
-    end
-    if @mood.save!
-      redirect_to days_path
-    else
-      render :new
-    end
+    redirect_to days_path
+
+    # if @mood.save
+    #   redirect_to days_path
+    # else
+    #   render :new
+    # end
   end
 
   private
