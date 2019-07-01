@@ -1,2 +1,14 @@
-<h1>Exercises#new</h1>
-<p>Find me in app/views/exercises/new.html.erb</p>
+<h1>Check in</h1>
+<p>How long did you workout for today?</p>
+
+
+
+<!--   <%# select_tag :time, options_for_select(Exercise::TIME), options: {value:  params[:feeling]},
+  class: "form-control search-bar" %>
+  <%# submit_tag, redirect_to days_path %> -->
+
+
+<% simple_form_for @exercise do |f| %>
+<%= f.input :time, collection: Exercise::TIME, as: :dropdown %>
+<%= f.submit %>
+<% end %>

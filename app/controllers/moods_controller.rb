@@ -4,8 +4,16 @@ class MoodsController < ApplicationController
   end
 
   def create
-    @mood = Mood.new(mood_params)
-    if @mood.save
+    # @mood = Mood.new(feeling: params[:feeling])
+    feelings = params[:feeling]
+
+    # does day exist?
+    # if yes .. find day .. if no create day
+    feelings.each do |feeling|
+      Mood.create(feeling: feeling, day: Day.first)
+
+    end
+    if @mood.save!
       redirect_to days_path
     else
       render :new

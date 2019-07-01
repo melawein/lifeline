@@ -11,6 +11,7 @@ class PainsController < ApplicationController
       redirect_to days_path
     else
       render :new
+    end
   end
 
   private
