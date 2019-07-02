@@ -1,5 +1,8 @@
-<h1>Check in</h1>
-<p>How long did you workout for today?</p>
+<h1 class="mood-header">Check in</h1>
+
+<%= render 'shared/optionswipe' %>
+
+<p class="mood-info">How long did you workout for today?</p>
 
   <%= simple_form_for(@exercise) do |f| %>
   <%= f.input :time, collection: Exercise::TIME, input_html: { min: '0', step: '10' } %>

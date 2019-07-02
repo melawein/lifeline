@@ -1,6 +1,9 @@
-<h1>Check in</h1>
+<h1 class="mood-header">Check in</h1>
 
-<p>Are you feeling any pain today?</p>
+
+<%= render 'shared/optionswipe' %>
+
+<p class="mood-info">Are you feeling any pain today?</p>
 
   <%= simple_form_for(@pain) do |f| %>
     <%= select_tag :symptom, options_for_select(Pain::SYMPTOMS), multiple: true, class: "form-control search-bar" %>

@@ -1,6 +1,7 @@
 class SleepsController < ApplicationController
   def new
     @sleep = Sleep.new
+    authorize @sleep
   end
 
   def create
@@ -12,7 +13,8 @@ class SleepsController < ApplicationController
     day = Day.find_by(date: date)
     day = Day.create(date: date, user: current_user) if day.nil?
 
-    Sleep.create(hours: hours, day: day)
+    @sleep = Sleep.create(hours: hours, day: day)
+    authorize @sleep
 
     redirect_to days_path
   end

@@ -1,10 +1,10 @@
 class ExercisesController < ApplicationController
   def new
     @exercise = Exercise.new
+    authorize @exercise
   end
 
   def create
-
     time = params[:exercise][:time]
 
 
@@ -14,6 +14,7 @@ class ExercisesController < ApplicationController
 
     exercise = Exercise.new(exercise_params)
     exercise.day = day
+    authorize exercise
 
     if exercise.save
       redirect_to days_path
