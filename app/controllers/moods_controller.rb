@@ -28,11 +28,6 @@ class MoodsController < ApplicationController
     # end
   end
 
-  # def moodSetAction
-  #   @mood_stuff = params[:mood_setting]
-  #   @mood = Mood.create(@mood_stuff)
-  # end
-
   private
 
     def mood_params
