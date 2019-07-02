@@ -1,6 +1,7 @@
 class MoodsController < ApplicationController
   def new
     @mood = Mood.new
+    authorize @mood
   end
 
   def create
@@ -14,8 +15,9 @@ class MoodsController < ApplicationController
     # does day exist?
     # if yes .. find day .. if no create day
     feelings.each do |feeling|
-      Mood.create(feeling: feeling, day: day)
+      @mood = Mood.create(feeling: feeling, day: day)
     end
+    authorize @mood
 
     redirect_to days_path
 

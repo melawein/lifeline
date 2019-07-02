@@ -1,6 +1,7 @@
 class PainsController < ApplicationController
   def new
     @pain = Pain.new
+    authorize @pain
   end
 
   def create
@@ -13,9 +14,9 @@ class PainsController < ApplicationController
     # does day exist?
     # if yes .. find day .. if no create day
     symptoms.each do |symptom|
-      Pain.create(symptom: symptom, day: day)
+      @pain = Pain.create(symptom: symptom, day: day)
     end
-
+    authorize @pain
     redirect_to days_path
   end
 

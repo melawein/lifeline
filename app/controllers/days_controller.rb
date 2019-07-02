@@ -1,11 +1,17 @@
 class DaysController < ApplicationController
   def index
-    @moods = Mood.all
-    @exercises = Exercise.all
-    @pains = Pain.all
-    @sleeps = Sleep.all
+    @moods = policy_scope(Mood)
+    @exercises = policy_scope(Exercise)
+    @pains = policy_scope(Pain)
+    @sleeps = policy_scope(Sleep)
     @events = @moods + @exercises + @pains + @sleeps
-    @days = Day.all
+    @days = policy_scope(Day)
+    authorize @days
+    # authorize @moods
+    # authorize @exercises
+    # authorize @pains
+    # authorize @sleeps
+
   end
 
   def show
