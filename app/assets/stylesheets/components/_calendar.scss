@@ -6,7 +6,18 @@
 tr {
   background-color: white;
 }
+
+
+td.active{
+border:  4px solid #78A1BB;
+}
+
 th {
   color: #78A1BB;
   font-weight: normal;
 }
+
+.table thead th  {
+    vertical-align: bottom;
+    border-bottom: 0px solid red;
+  }
