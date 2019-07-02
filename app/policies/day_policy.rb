@@ -6,6 +6,6 @@ class DayPolicy < ApplicationPolicy
   end
 
   def index?
-    true
+    record_user = user
   end
 end

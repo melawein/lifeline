@@ -7,10 +7,7 @@ class DaysController < ApplicationController
     @events = @moods + @exercises + @pains + @sleeps
     @days = policy_scope(Day)
     authorize @days
-    # authorize @moods
-    # authorize @exercises
-    # authorize @pains
-    # authorize @sleeps
+
 
   end
 
