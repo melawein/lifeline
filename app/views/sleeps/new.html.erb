@@ -1,5 +1,9 @@
-<h1>Check in</h1>
-<p>How many hours have you slept today?</p>
+<h1 class="mood-header">Check in</h1>
+
+
+<%= render 'shared/optionswipe' %>
+
+<p class="mood-info">How many hours have you slept today?</p>
 
   <%= simple_form_for(@sleep) do |f| %>
   <%= select_tag :hours, options_for_select(Sleep::HOURS) %>
