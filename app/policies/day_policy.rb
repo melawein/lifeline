@@ -1,11 +1,7 @@
 class DayPolicy < ApplicationPolicy
   class Scope < Scope
     def resolve
-      scope.all
+      scope.where(user: user)
     end
-  end
-
-  def index?
-    record_user = user
   end
 end
