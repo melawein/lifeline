@@ -1,23 +1,71 @@
 .day {
   background-color: white;
-  height: 25px;
+  height: 50px;
+  border: none;
+  text-align: center;
+}
+th {
+  color: black;
+  font-weight: normal;
+  min-width: 53.57px !important;
+  max-width: 53.57px !important;
+  border-bottom: white !important;
+    text-transform: uppercase;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+        font-weight: 550;
+
+
+
+
+
+}
+
+td {
+border-top-color: white !important;
+
+}
+
+.all-event {
+display: flex;
+flex-wrap: wrap;
+
 }
 
 tr {
   background-color: white;
+
 }
 
 
-td.active{
-border:  4px solid #78A1BB;
+.active{
+background-color: #59bab3;
+border-radius: 10px !important;
+color: white;
+ //background-color: rgba(58, 232, 223, 0.2);
 }
 
-th {
-  color: #78A1BB;
-  font-weight: normal;
+//#text
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: white !important;
 }
 
-.table thead th  {
-    vertical-align: bottom;
-    border-bottom: 0px solid red;
-  }
+
+.fas {
+  color: #59bab3;
+ // font-size: 25px;
+  font-weight: 350px;
+}
+
+.calendar-title {
+  font-size: 19px;
+  padding-left: 25px;
+  padding-right: 25px;
+
+}
+
+
+.calendar-heading {
+  padding-bottom: 12px;
+  text-align: center;
+}

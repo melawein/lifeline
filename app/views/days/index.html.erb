@@ -1,10 +1,10 @@
 <h1>Calendar</h1>
 
 
-
 <%= month_calendar(events: @events) do |date, events| %>
   <%= date.day %>
-<div class="d-flex justify-content-between">
+
+<div class="d-flex justify-content-between all-event">
   <% events.each do |event| %>
     <div>
       <% if event.is_a?(Mood) %>
@@ -20,6 +20,8 @@
   <% end %>
 
 <% end %>
+
+
 
 
 
