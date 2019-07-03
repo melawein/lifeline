@@ -2,11 +2,19 @@
 
 <%= render 'shared/optionswipe' %>
 
-<p class="mood-info">How long did you workout for today?</p>
+<p class="mood-info">How long did you workout for?</p>
 
   <%= simple_form_for(@exercise) do |f| %>
-  <%= f.input :time, collection: Exercise::TIME, input_html: { min: '0', step: '10' } %>
+  <%= f.input :time, collection: Exercise::TIME, input_html: { min: '0', step: '10' }, as: :hidden %>
     <%= date_select("day", "date") %>
     <%= f.submit %>
 
   <% end %>
+
+<div id="eslider">
+  <div class="slider-exercise"></div>
+</div>
+
+
+<%= javascript_pack_tag 'slider_exercise' %>
+<%= stylesheet_pack_tag 'slider_exercise' %>

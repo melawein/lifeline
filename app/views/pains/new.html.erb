@@ -3,11 +3,21 @@
 
 <%= render 'shared/optionswipe' %>
 
-<p class="mood-info">Are you feeling any pain today?</p>
+<p class="mood-info">Are you feeling any pain?</p>
 
   <%= simple_form_for(@pain) do |f| %>
-    <%= select_tag :symptom, options_for_select(Pain::SYMPTOMS), multiple: true, class: "form-control search-bar" %>
+    <%= select_tag :symptom, options_for_select(Pain::SYMPTOMS), multiple: true %>
+
     <%= date_select("day", "date") %>
     <%= f.submit %>
 
   <% end %>
+
+
+  <div id="pslider">
+    <div class="slider-pain"></div>
+  </div>
+
+
+  <%= javascript_pack_tag 'slider_pain' %>
+  <%= stylesheet_pack_tag 'slider_pain' %>
