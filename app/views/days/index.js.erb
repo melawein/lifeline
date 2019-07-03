@@ -1,0 +1,5 @@
+function showEvents(){
+  const displayDiv = document.querySelector(".calendar__display");
+  displayDiv.innerHTML = "<%= j render 'shared/show_events', day: @day %>";
+}
+showEvents();
