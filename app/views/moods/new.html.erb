@@ -1,19 +1,14 @@
+<%= simple_form_for(@mood) do |f| %>
+<%= select_tag :feeling, options_for_select(Mood::FEELING), multiple: true%>
+<%= date_select("day", "date") %>
+<%= f.submit 'Done' %>
+<% end %>
 <h1 class="mood-header">Check in</h1>
 
 
 <%= render 'shared/optionswipe' %>
 
 <p class="mood-info">How are you feeling?</p>
-
-  <%= simple_form_for(@mood) do |f| %>
-    <%= select_tag :feeling, options_for_select(Mood::FEELING), multiple: true%>
-    <%= date_select("day", "date") %>
-    <%= f.submit %>
-
-  <% end %>
-
-
-
 
 <div id="mslider">
   <div class="slider-mood">
@@ -22,3 +17,13 @@
 
 <%= javascript_pack_tag 'slider_mood' %>
 <%= stylesheet_pack_tag 'slider_mood' %>
+
+
+<div class="cal-swipe">
+  <%= week_calendar number_of_weeks: 1 do |date| %>
+  <%= date.day %>
+  <% end %>
+</div>
+
+
+
