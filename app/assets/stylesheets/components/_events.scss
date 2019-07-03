@@ -1,7 +1,7 @@
 .mood-event {
     width: 6px;
     height: 6px;
-    background-color: $mood;
+    background-color: $mood !important;
     border-radius: 50%;
   }
 
@@ -9,7 +9,7 @@
   .exercise-event {
     width: 6px;
     height: 6px;
-    background-color: $exercise;
+    background-color: $exercise !important;
     border-radius: 50%;
 
   }
@@ -17,7 +17,7 @@
   .pain-event {
     width: 6px;
     height: 6px;
-    background-color: $pain;
+    background-color: $pain !important;
     border-radius: 50%;
 
   }
@@ -25,7 +25,95 @@
   .sleep-event {
     width: 6px;
     height: 6px;
-    background-color: $sleep;
+    background-color: $sleep !important;
     border-radius: 50%;
-
   }
+
+
+.all-event {
+  background-color: rgba(255,255,255, 0.01)!important;
+}
+
+.show-info {
+  font-size: 13px;
+}
+
+#pain-name {
+  font-weight: bold;
+  color: $pain;
+  text-transform: uppercase;
+  font-family: 'Raleway', sans-serif;
+
+
+}
+
+
+#ex-name {
+  font-weight: bold;
+  color: $exercise;
+  text-transform: uppercase;
+  font-family: 'Raleway', sans-serif;
+
+
+}
+
+#mood-name {
+  font-weight: bold;
+  color: $mood;
+  text-transform: uppercase;
+  font-family: 'Raleway', sans-serif;
+
+
+}
+
+#sleep-name {
+  font-weight: bold;
+  color: $sleep;
+  text-transform: uppercase;
+  font-family: 'Raleway', sans-serif;
+
+
+}
+
+
+#pain-info {
+  color: $pain;
+  text-transform: uppercase;
+  font-family: 'Raleway', sans-serif;
+
+
+}
+
+
+#ex-info {
+  color: $exercise;
+  text-transform: uppercase;
+  font-family: 'Raleway', sans-serif;
+
+
+}
+
+#mood-info {
+  color: $mood;
+  text-transform: uppercase;
+  font-family: 'Raleway', sans-serif;
+
+
+}
+
+#sleep-info {
+  color: $sleep;
+  text-transform: uppercase;
+  font-family: 'Raleway', sans-serif;
+
+
+}
+
+
+.show-box {
+  margin-top: 40px;
+  padding: 16px;
+  background-color: white;
+  border-left: 5px solid gray;
+  overflow: scroll;
+}

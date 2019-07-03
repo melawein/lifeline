@@ -3,26 +3,28 @@
 
 
 <%= month_calendar(events: @events) do |date, events| %>
-  <%= date.day %>
+<%= date.day %>
 
 <div class="d-flex justify-content-between all-event">
   <% events.each do |event| %>
-    <div>
-      <% if event.is_a?(Mood) %>
-      <div class="mood-event"></div>
-      <% elsif event.is_a?(Exercise) %>
-     <div class="exercise-event"></div>
-      <% elsif event.is_a?(Pain) %>
-      <div class="pain-event"></div>
-      <% elsif event.is_a?(Sleep) %>
-      <div class="sleep-event"></div>
-      <% end %>
-    </div>
+    <% @event = event %>
+  <div>
+    <% if event.is_a?(Mood) %>
+    <div class="mood-event"></div>
+    <% elsif event.is_a?(Exercise) %>
+    <div class="exercise-event"></div>
+    <% elsif event.is_a?(Pain) %>
+    <div class="pain-event"></div>
+    <% elsif event.is_a?(Sleep) %>
+    <div class="sleep-event"></div>
+    <% end %>
+  </div>
+  <% end %>
   <% end %>
 
-<% end %>
 
-
-
+    <div>
+      <%= render 'shared/show_events', day: @event.day %>
+    </div>
 
 
