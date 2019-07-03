@@ -3,10 +3,19 @@
 
 <%= render 'shared/optionswipe' %>
 
-<p class="mood-info">How many hours have you slept today?</p>
+<p class="mood-info">How many hours have you slept?</p>
 
   <%= simple_form_for(@sleep) do |f| %>
-  <%= select_tag :hours, options_for_select(Sleep::HOURS) %>
+    <%= f.input :hours, collection: Sleep::HOURS %>
     <%= date_select("day", "date") %>
     <%= f.submit %>
   <% end %>
+
+
+<div id="sslider">
+  <div class="slider-sleep"></div>
+</div>
+
+
+  <%= javascript_pack_tag 'slider_sleep' %>
+  <%= stylesheet_pack_tag 'slider_sleep' %>

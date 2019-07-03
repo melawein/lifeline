@@ -3,11 +3,22 @@
 
 <%= render 'shared/optionswipe' %>
 
-<p class="mood-info">How are you feeling today?</p>
+<p class="mood-info">How are you feeling?</p>
 
   <%= simple_form_for(@mood) do |f| %>
-    <%= select_tag :feeling, options_for_select(Mood::FEELING), multiple: true, class: "form-control search-bar" %>
+    <%= select_tag :feeling, options_for_select(Mood::FEELING), multiple: true%>
     <%= date_select("day", "date") %>
     <%= f.submit %>
 
   <% end %>
+
+
+
+
+<div id="mslider">
+  <div class="slider-mood">
+  </div>
+</div>
+
+<%= javascript_pack_tag 'slider_mood' %>
+<%= stylesheet_pack_tag 'slider_mood' %>

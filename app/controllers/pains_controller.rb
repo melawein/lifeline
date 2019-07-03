@@ -5,6 +5,7 @@ class PainsController < ApplicationController
   end
 
   def create
+
     symptoms = params[:symptom]
 
     date = Date.new(params["day"]["date(1i)"].to_i, params["day"]["date(2i)"].to_i, params["day"]["date(3i)"].to_i)

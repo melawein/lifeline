@@ -1,0 +1,76 @@
+#sslider {
+  /*
+    position: relative is needed for the handle to be
+    positioned correctly, and border-radius: 100% just
+    makes the div round.
+  */
+  position: relative;
+  border-radius: 100%;
+
+  /* Other than the above two, go wild! */
+  height: 300px;
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 17px solid transparent;
+  border-radius: 150px;
+  background-image: linear-gradient(white, white), linear-gradient(to right, #83B3B5, #59797a);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  font-size: 50px;
+  font-family: 'Comfortaa', cursive;
+  color: #83B3B5;
+  margin-left: 32px;
+}
+
+/*
+  Probably best to paste this exactly as is.
+  These CSS rules make sure that the handle rotates
+  properly, so don't change anything here.
+*/
+.cs-handle-container {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  height: 2px;
+  margin-top: -1px;
+}
+
+/* Also paste as is */
+.cs-handle {
+  position: absolute;
+  transform: translateY(150%);
+}
+
+/* the appearance of the handle, feel free to change! */
+#sslider .cs-handle {
+  height: 30px;
+  width: 30px;
+  /*
+    Change 'right' to change the offset from the edge.
+    E.g right: 0 puts the handle just next to the edge
+    of #slider, on the inside
+  */
+  right: -15px;
+  cursor: default;
+  border-radius: 100%;
+  background-color: #636363;
+  box-shadow: rgba(0, 0, 0, 0.3) 0 1px 10px 0;
+}
+
+#sslider .cs-handle:active {
+  background: linear-gradient(180deg, #EBEBEB, #DFDFDF)
+}
+
+
+
+
+
+
+
+
+
+
+

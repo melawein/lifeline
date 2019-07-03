@@ -6,6 +6,7 @@ class MoodsController < ApplicationController
 
   def create
     # @mood = Mood.new(feeling: params[:feeling])
+
     feelings = params[:feeling]
 
     date = Date.new(params["day"]["date(1i)"].to_i, params["day"]["date(2i)"].to_i, params["day"]["date(3i)"].to_i)
@@ -14,6 +15,8 @@ class MoodsController < ApplicationController
     day = Day.create(date: date, user: current_user) if day.nil?
     # does day exist?
     # if yes .. find day .. if no create day
+
+
     feelings.each do |feeling|
       @mood = Mood.create(feeling: feeling, day: day)
     end
