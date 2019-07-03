@@ -14,7 +14,7 @@
   }
 }
 
-.fa-chevron-right {
+#arrow {
   text-align: center;
   font-size: 35px;
 }
@@ -38,7 +38,7 @@ span {
 .tab:hover {
   opacity: 1;
 }
-.tab.active {
+.tab.actives {
   opacity: 1;
   font-size: 40px;
   font-weight: bold;
