@@ -1,32 +1,34 @@
 <div class="show-box">
 
-<% day.all_events_today.each do |event| %>
-<div class="d-flex justify-content-start align-items-center">
-
-  <% if event.is_a?(Mood) %>
-<span> <div class="mood-event"> </div></span>
+  <%= day.date %>
+  <% day.all_events_today.each do |event| %>
+  <div class="d-flex justify-content-start align-items-center">
+    <% if event.is_a?(Mood) %>
+    <span> <div class="mood-event"> </div></span>
     <span class="show-info">
       <span id="mood-name"><%= event.class %></span>
       <span id="mood-info"> <%= event.feeling %></span></span>
 
-  <% elsif event.is_a?(Exercise) %>
-  <span><div class="exercise-event"></div></span>
-    <span class="show-info">
-     <span id="ex-name"> <%= event.class %></span>
-     <span id="ex-info"> <%= event.time %> minutes</span></span>
+      <% elsif event.is_a?(Exercise) %>
+      <span><div class="exercise-event"></div></span>
+      <span class="show-info">
+       <span id="ex-name"> <%= event.class %></span>
+       <span id="ex-info"> <%= event.time %> minutes</span></span>
 
-  <% elsif event.is_a?(Pain) %>
-  <span><div class="pain-event"></div></span>
-    <span class="show-info">
-      <span id="pain-name"><%= event.class %></span>
-      <span id="pain-info"> <%= event.symptom %></span></span>
+       <% elsif event.is_a?(Pain) %>
+       <span><div class="pain-event"></div></span>
+       <span class="show-info">
+        <span id="pain-name"><%= event.class %></span>
+        <span id="pain-info"> <%= event.symptom %></span></span>
 
-  <% elsif event.is_a?(Sleep) %>
-  <span><div class="sleep-event"></div></span>
-    <span class="show-info">
-      <span id="sleep-name"><%= event.class %></span>
-      <span id="sleep-info"> <%= event.hours %> hours</span></span>
-  <% end %>
-</div>
-<% end %>
-</div>
+        <% elsif event.is_a?(Sleep) %>
+        <span><div class="sleep-event"></div></span>
+        <span class="show-info">
+          <span id="sleep-name"><%= event.class %></span>
+          <span id="sleep-info"> <%= event.hours %> hours</span></span>
+          <% elsif day.nil? %>
+          <span class="show-info"> No events</span>
+          <% end %>
+        </div>
+        <% end %>
+      </div>

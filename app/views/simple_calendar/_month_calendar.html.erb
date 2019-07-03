@@ -18,6 +18,8 @@
       <% date_range.each_slice(7) do |week| %>
         <tr>
           <% week.each do |day| %>
+
+
             <%= content_tag :td, class: calendar.td_classes_for(day), id:'cal_day' do %>
               <% if defined?(Haml) && respond_to?(:block_is_haml?) && block_is_haml?(block) %>
                 <% capture_haml(day, sorted_events.fetch(day, []), &block) %>
@@ -25,7 +27,9 @@
                 <% block.call day, sorted_events.fetch(day, []) %>
               <% end %>
             <% end %>
+
           <% end %>
+
         </tr>
       <% end %>
     </tbody>
@@ -33,8 +37,9 @@
 </div>
 
 
+
 <script>
-  const days = document.querySelectorAll('#cal_day');
+  const days = document.querySelectorAll('.day-link');
   days.forEach((day)=> {
     day.addEventListener('click', (event)=>{
       let selectedDate = event.target;

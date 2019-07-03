@@ -1,30 +1,31 @@
 <h1>Calendar</h1>
-
-
-
 <%= month_calendar(events: @events) do |date, events| %>
-<%= date.day %>
+  <% day = Day.find_by(date: date.to_datetime) %>
+  <% day_link  =  day.nil? ? "#" : days_path(day: day.id)   %>
+  <%= link_to day_link, remote: true, class: "day-link" do  %>
 
-<div class="d-flex justify-content-between all-event">
-  <% events.each do |event| %>
-    <% @event = event %>
-  <div>
-    <% if event.is_a?(Mood) %>
-    <div class="mood-event"></div>
-    <% elsif event.is_a?(Exercise) %>
-    <div class="exercise-event"></div>
-    <% elsif event.is_a?(Pain) %>
-    <div class="pain-event"></div>
-    <% elsif event.is_a?(Sleep) %>
-    <div class="sleep-event"></div>
-    <% end %>
-  </div>
+  <%= date.day %>
+    <div class="d-flex justify-content-between all-event">
+      <% events.each do |event| %>
+        <% @event = event %>
+      <div>
+        <% if event.is_a?(Mood) %>
+        <div class="mood-event"></div>
+        <% elsif event.is_a?(Exercise) %>
+        <div class="exercise-event"></div>
+        <% elsif event.is_a?(Pain) %>
+        <div class="pain-event"></div>
+        <% elsif event.is_a?(Sleep) %>
+        <div class="sleep-event"></div>
+        <% end %>
+      </div>
+      <% end %>
+    </div>
   <% end %>
-  <% end %>
+<% end %>
 
-
-    <div>
-      <%= render 'shared/show_events', day: @event.day %>
+    <div class="calendar__display">
+       <%= render 'shared/show_events', day: @day %>
     </div>
 
 
