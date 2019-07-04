@@ -5,19 +5,21 @@
 
 <p class="mood-info">Are you feeling any pain?</p>
 
-  <%= simple_form_for(@pain) do |f| %>
-    <%= select_tag :symptom, options_for_select(Pain::SYMPTOMS), multiple: true %>
-
-    <%= date_select("day", "date") %>
-    <%= f.submit %>
-
-  <% end %>
 
 
   <div id="pslider">
     <div class="slider-pain"></div>
   </div>
 
+  <%= simple_form_for(@pain) do |f| %>
+    <%= select_tag :symptom, options_for_select(Pain::SYMPTOMS), multiple: true %>
+  <div class="pain-date">
+
+    <span class="pain-field"><%= date_select("day", "date") %></span>
+    <span class="btn btn-danger btn-sm btn-pain" ><%= f.submit 'Done'%></span>
+  </div>
+
+  <% end %>
 
   <%= javascript_pack_tag 'slider_pain' %>
   <%= stylesheet_pack_tag 'slider_pain' %>
