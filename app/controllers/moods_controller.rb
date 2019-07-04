@@ -38,7 +38,7 @@ class MoodsController < ApplicationController
     day = @mood.day
     authorize @mood
     @mood.destroy
-    redirect_to day_path
+    redirect_to days_path
     end
 
   private

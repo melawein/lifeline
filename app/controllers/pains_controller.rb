@@ -21,6 +21,15 @@ class PainsController < ApplicationController
     redirect_to days_path
   end
 
+def destroy
+    # feelings = params[:feeling]
+
+    @pain = Pain.find(params[:id])
+    day = @pain.day
+    authorize @pain
+    @pain.destroy
+    redirect_to days_path
+    end
   private
 
    def pain_params

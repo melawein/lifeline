@@ -3,8 +3,50 @@
     height: 6px;
     background-color: $mood !important;
     border-radius: 50%;
+    position: relative;
+
   }
 
+  .mood-event-show {
+    width: 15px;
+    height: 15px;
+    background-color: $mood !important;
+    border-radius: 50%;
+    position: relative;
+
+  }
+
+.delete-but {
+  position: absolute;
+  font-size: 10px;
+  color: white;
+text-align: center;
+  text-decoration: none;
+  right: 1px;
+    left: 1px;
+
+
+
+}
+
+ .exercise-event-show {
+    width: 15px;
+    height: 15px;
+    background-color: $exercise !important;
+    border-radius: 50%;
+    position: relative;
+
+  }
+
+  .delete-but-x {
+  position: absolute;
+  font-size: 10px;
+  color: white;
+    text-align: center;
+  text-decoration: none;
+  right: 1px;
+    left: 1px;
+  }
 
   .exercise-event {
     width: 6px;
@@ -22,11 +64,44 @@
 
   }
 
+  .pain-event-show {
+     width: 15px;
+    height: 15px;
+    background-color: $pain !important;
+    border-radius: 50%;
+    position: relative;
+  }
+ .delete-but-p {
+  position: absolute;
+  font-size: 10px;
+  color: white;
+    text-align: center;
+  text-decoration: none;
+  right: 1px;
+    left: 1px;
+  }
   .sleep-event {
     width: 6px;
     height: 6px;
     background-color: $sleep !important;
     border-radius: 50%;
+  }
+
+  .sleep-event-show {
+     width: 15px;
+    height: 15px;
+    background-color: $sleep !important;
+    border-radius: 50%;
+    position: relative;
+  }
+ .delete-but-s {
+  position: absolute;
+  font-size: 10px;
+  color: white;
+    text-align: center;
+  text-decoration: none;
+  right: 1px;
+    left: 1px;
   }
 .no-event {
   width: 8px;
@@ -131,3 +206,5 @@
   font-weight: bold;
 
 }
+
+
