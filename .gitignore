@@ -1,4 +1,4 @@
-  .bundle
+.bundle
 log/*.log
 tmp/**/*
 tmp/*
@@ -6,10 +6,11 @@ tmp/*
 !tmp/.keep
 *.swp
 .DS_Store
-public/packs
 public/assets
+public/packs
 public/packs-test
 node_modules
 yarn-error.log
 .byebug_history
+.env*
 .env*
