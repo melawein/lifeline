@@ -1,7 +1,7 @@
 <div class="home-page">
 <%= link_to "Sign out",  destroy_user_session_path, method: :delete  %>
 <div class="container-home">
-  <h1>Good Morning <%= current_user.first_name %></h1>
+  <h1><%= @greeting %> <%=current_user.first_name %></h1>
 </div>
 
 </div>
