@@ -8,10 +8,13 @@ class DaysController < ApplicationController
     @days = policy_scope(Day)
     if params[:day]
       @day = Day.find(params[:day])
+
+
     else
-      @day = Day.find_by(date: Date.today)
-      #render '../views/shared/show_events'
+     # @day = Day.find_by(date: Date.today)
+      @day = nil
     end
+
 
     respond_to do |format|
       format.html
@@ -19,10 +22,7 @@ class DaysController < ApplicationController
     end
   end
 
-  def show
-    # date = Date.parse("#{params[:year]}-#{params[:month]}-#{params[:date]}")
-    # @calendar = ::EventCal::Calendar.new(date)
-  end
+
 
 
   def edit

@@ -21,6 +21,16 @@ class ExercisesController < ApplicationController
     else
       render :new
     end
+
+     def destroy
+    # feelings = params[:feeling]
+
+    @exercise = Exercise.find(params[:id])
+    day = @exercise.day
+    authorize @exercise
+    @exercise.destroy
+    redirect_to days_path
+    end
   end
 
   private

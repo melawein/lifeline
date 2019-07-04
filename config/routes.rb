@@ -8,10 +8,10 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :moods, only: [:new, :create]
-  resources :pains, only: [:new, :create]
-  resources :exercises, only: [:new, :create]
-  resources :sleeps, only: [:new, :create]
+  resources :moods, only: [:new, :create, :destroy]
+  resources :pains, only: [:new, :create, :destroy]
+  resources :exercises, only: [:new, :create, :destroy]
+  resources :sleeps, only: [:new, :create, :destroy]
   resources :stats, only: [:index]
   root to: 'pages#home'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

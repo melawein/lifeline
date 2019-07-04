@@ -18,5 +18,13 @@ class SleepsController < ApplicationController
 
     redirect_to days_path
   end
+def destroy
+    # feelings = params[:feeling]
 
+    @sleep = Sleep.find(params[:id])
+    day = @sleep.day
+    authorize @sleep
+    @sleep.destroy
+    redirect_to days_path
+    end
 end
