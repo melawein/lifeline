@@ -1,10 +1,15 @@
 <h1>Calendar</h1>
+
+
+
 <%= month_calendar(events: @events) do |date, events| %>
   <% day = Day.find_by(date: date.to_datetime) %>
   <% day_link  =  day.nil? ? "#" : days_path(day: day.id)   %>
+  <%# day_link  =  events.nil? && day.nil?? "days?day=#{day}" : days_path(day: day.id)   %>
   <%= link_to day_link, remote: true, class: "day-link" do  %>
 
   <%= date.day %>
+
     <div class="d-flex justify-content-between all-event">
       <% events.each do |event| %>
         <% @event = event %>
