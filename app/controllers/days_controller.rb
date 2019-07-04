@@ -9,9 +9,9 @@ class DaysController < ApplicationController
     if params[:day]
       @day = Day.find(params[:day])
     else
-      @day = Day.find_by(date: Date.today)
+     @day = Day.find_by(date: Date.today)
       #render '../views/shared/show_events'
-    end
+ end
 
     respond_to do |format|
       format.html

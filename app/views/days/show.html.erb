@@ -1,5 +1,6 @@
 <div class="d-flex justify-content-between all-event">
   <% events.each do |event| %>
+  <% @events = events %>
     <div>
       <% if event.is_a?(Mood) %>
       <div class="mood-event"> <%= mood.feeling %> </div>

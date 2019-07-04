@@ -18,6 +18,7 @@
 
 
 <body>
+  <%= favicon_link_tag asset_path('spinner-solid.svg') %>
   <div class="content">
 
     <%= yield %>
@@ -26,5 +27,8 @@
   <%= javascript_include_tag 'application' %>
   <%= javascript_pack_tag 'application' %>
   <%= yield(:after_Js) %>
+
+
+
 </body>
 </html>

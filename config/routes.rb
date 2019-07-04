@@ -8,7 +8,7 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :moods, only: [:new, :create]
+  resources :moods, only: [:new, :create, :destroy]
   resources :pains, only: [:new, :create]
   resources :exercises, only: [:new, :create]
   resources :sleeps, only: [:new, :create]

@@ -1,11 +1,14 @@
 <div class="show-box">
-  <div class="d-flex justify-content-start align-items-center">
   <% if day.nil? %>
-  <div class="no-event"></div>
-  <span class="show-info"> <span></span> No data entered for this day</span>
-  </div>
+  <span class="show-info">
+
+     <span> <i class="fas fa-spinner"></i> No information entered for this day</span></span>
+
   <% else %>
-  <div class="d-flex flex-row-reverse box-date"><%= day.date.strftime("%A, %b %d") %></div>
+
+  <div class="d-flex flex-row-reverse box-date"><%= day.date.strftime("%A, %b %d") %>
+
+  </div>
   <% day.all_events_today.each do |event| %>
   <div class="d-flex justify-content-start align-items-center">
     <% if event.is_a?(Mood) %>
@@ -13,6 +16,12 @@
     <span class="show-info">
       <span id="mood-name"><%= event.class %></span>
       <span id="mood-info"> <%= event.feeling %></span></span>
+      <% @moods.each do |mood| %>
+ <%= link_to "Delete", mood_path(mood),
+              method: :delete,
+              data: { confirm: "Are you sure?" }, class: "btn btn-outline-info" %>
+
+              <% end %>
 
       <% elsif event.is_a?(Exercise) %>
       <span><div class="exercise-event"></div></span>
@@ -36,4 +45,9 @@
         <% end %>
 <% end %>
 
+
+
+            </div>
+
 </div>
+

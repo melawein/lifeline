@@ -31,6 +31,16 @@ class MoodsController < ApplicationController
     # end
   end
 
+  def destroy
+    # feelings = params[:feeling]
+
+    @mood = Mood.find(params[:id])
+    day = @mood.day
+    authorize @mood
+    @mood.destroy
+    redirect_to day_path
+    end
+
   private
 
     def mood_params
