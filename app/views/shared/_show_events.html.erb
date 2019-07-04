@@ -1,6 +1,11 @@
 <div class="show-box">
-
-  <%= day.date %>
+  <div class="d-flex justify-content-start align-items-center">
+  <% if day.nil? %>
+  <div class="no-event"></div>
+  <span class="show-info"> <span></span> No data entered for this day</span>
+  </div>
+  <% else %>
+  <div class="d-flex flex-row-reverse box-date"><%= day.date.strftime("%A, %b %d") %></div>
   <% day.all_events_today.each do |event| %>
   <div class="d-flex justify-content-start align-items-center">
     <% if event.is_a?(Mood) %>
@@ -26,9 +31,9 @@
         <span class="show-info">
           <span id="sleep-name"><%= event.class %></span>
           <span id="sleep-info"> <%= event.hours %> hours</span></span>
-          <% elsif day.nil? %>
-          <span class="show-info"> No events</span>
           <% end %>
         </div>
         <% end %>
-      </div>
+<% end %>
+
+</div>

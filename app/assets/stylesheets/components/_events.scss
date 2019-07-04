@@ -28,7 +28,13 @@
     background-color: $sleep !important;
     border-radius: 50%;
   }
-
+.no-event {
+  width: 8px;
+    height: 8px;
+    background-color: white !important;
+    border: 1px solid black;
+    border-radius: 50%;
+}
 
 .all-event {
   background-color: rgba(255,255,255, 0.01)!important;
@@ -36,6 +42,7 @@
 
 .show-info {
   font-size: 13px;
+   font-family: 'Raleway', sans-serif;
 }
 
 #pain-name {
@@ -116,4 +123,11 @@
   background-color: white;
   border-left: 5px solid gray;
   overflow: scroll;
+}
+
+.box-date {
+  font-family: 'Raleway', sans-serif;
+  font-size: 13px;
+  font-weight: bold;
+
 }
