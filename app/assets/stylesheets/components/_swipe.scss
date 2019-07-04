@@ -46,15 +46,19 @@ span {
   opacity: 0.3;
   border-bottom: 5px solid transparent;
   text-decoration: none;
+  a {
+    text-decoration: none;
+  }
 }
-.tab:hover {
-  opacity: 1;
-}
+// .tab:hover {
+//   opacity: 1;
+// }
 .tab.actives {
   opacity: 1;
   font-size: 40px;
   font-weight: bold;
   border-bottom: 3px solid black;
+  text-decoration: none
 }
 
 
@@ -77,24 +81,24 @@ span {
   color: $exercise;
 }
 
-.cal-swipe {
-  display: flex;
-  td {
-    flex-wrap: wrap;
-  }
-}
+// .cal-swipe {
+//   display: flex;
+//   td {
+//     flex-wrap: wrap;
+//   }
+// }
 
-#day_date_1i {
-  display: none;
-}
+// #day_date_1i {
+//   display: none;
+// }
 
-#day_date_2i {
-  display: none;
-}
+// #day_date_2i {
+//   display: none;
+// }
 
-#day_date_3i {
-  display: none;
-}
+// #day_date_3i {
+//   display: none;
+// }
 
 
 
