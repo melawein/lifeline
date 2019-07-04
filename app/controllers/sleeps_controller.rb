@@ -6,7 +6,7 @@ class SleepsController < ApplicationController
 
   def create
 
-    hours = params[:hours]
+    hours = params[:sleep][:hours]
 
     date = Date.new(params["day"]["date(1i)"].to_i, params["day"]["date(2i)"].to_i, params["day"]["date(3i)"].to_i)
 

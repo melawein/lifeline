@@ -8,11 +8,12 @@ const sliderMood = () => {
     startPos: "top",
   };
 
-  const feeling = document.querySelector('#mood_feeling');
+  const feeling = document.querySelector('#feeling');
 
-  let moodText;
+  let moodText = 'Great';
   const cs = new CircleSlider("#mslider", options);
   const mood = document.querySelector(".slider-mood");
+  mood.innerText = moodText;
   cs.on("sliderMove", (angle) => {
 
     if (angle > 0 && angle <= 60) {
