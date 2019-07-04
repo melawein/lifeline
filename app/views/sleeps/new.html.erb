@@ -5,16 +5,18 @@
 
 <p class="mood-info">How many hours have you slept?</p>
 
-  <%= simple_form_for(@sleep) do |f| %>
-    <%= f.input :hours, collection: Sleep::HOURS %>
-    <%= date_select("day", "date") %>
-    <%= f.submit %>
-  <% end %>
-
-
 <div id="sslider">
   <div class="slider-sleep"></div>
 </div>
+
+  <%= simple_form_for(@sleep) do |f| %>
+    <%= f.input :hours, collection: Sleep::HOURS %>
+    <div class="sleep-date">
+      <span class="sleep-field"> <%= date_select("day", "date") %></span>
+
+    <%= f.submit 'Done', class: "btn btn-sm btn-info btn-sleep" %>
+  </div>
+  <% end %>
 
 
   <%= javascript_pack_tag 'slider_sleep' %>

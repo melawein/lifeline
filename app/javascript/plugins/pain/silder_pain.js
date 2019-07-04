@@ -9,10 +9,11 @@ function sliderPain(){
 
   const cs = new CircleSlider("#pslider");
 
-  const symptom = document.querySelector("#pain_symptom");
+  const symptom = document.querySelector("#symptom");
 
-  let painText;
+  let painText = 'Head';
   const pain = document.querySelector(".slider-pain");
+  pain.innerText = painText;
   cs.on("sliderMove", (angle) => {
 
     if (angle > 0 && angle <= 90) {

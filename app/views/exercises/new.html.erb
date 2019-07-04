@@ -4,17 +4,18 @@
 
 <p class="mood-info">How long did you workout for?</p>
 
-  <%= simple_form_for(@exercise) do |f| %>
-  <%= f.input :time, collection: Exercise::TIME, input_html: { min: '0', step: '10' }, as: :hidden %>
-    <%= date_select("day", "date") %>
-    <%= f.submit %>
-
-  <% end %>
 
 <div id="eslider">
   <div class="slider-exercise"></div>
 </div>
 
+  <%= simple_form_for(@exercise) do |f| %>
+  <%= f.input :time, collection: Exercise::TIME, input_html: { min: '0', step: '10' }, as: :hidden %>
+  <div class="exercise-date">
+    <span class="exercise-field"><%= date_select("day", "date") %></span>
+    <%= f.submit 'Done', class: "btn btn-warning btn-sm btn-exercise"%>
+</div>
+  <% end %>
 
 <%= javascript_pack_tag 'slider_exercise' %>
 <%= stylesheet_pack_tag 'slider_exercise' %>

@@ -10,10 +10,11 @@ const sliderExercise = () => {
 
   const time = document.querySelector('#exercise_time');
 
-  let exerciseTime;
+  let exerciseTime = 'Minutes';
 
   const cs = new CircleSlider("#eslider", options);
   const exercise = document.querySelector('.slider-exercise');
+  exercise.innerText = exerciseTime;
   cs.on("sliderMove", (angle) => {
     if (angle > 0 && angle <= 30) {
       exerciseTime = '10'

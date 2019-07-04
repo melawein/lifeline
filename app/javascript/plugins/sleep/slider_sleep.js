@@ -9,9 +9,10 @@ const sliderSleep = () => {
   };
   const hours = document.querySelector('#hours');
 
-  let sleepHours;
+  let sleepHours = 'Hours';
   const cs = new CircleSlider("#sslider", options);
   const sleep = document.querySelector('.slider-sleep');
+  sleep.innerText = sleepHours;
 
   cs.on("sliderMove", (angle) => {
     if (angle > 0 && angle <= 30) {
