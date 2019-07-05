@@ -3,7 +3,7 @@
 
 
 <%= month_calendar(events: @events) do |date, events| %>
-  <% day = Day.find_by(date: date.to_datetime) %>
+  <% day = Day.find_by(date: date.to_datetime, user_id: current_user) %>
   <% day_link  =  day.nil? ? "#" : days_path(day: day.id)   %>
   <%# day_link  =  events.nil? && day.nil?? "days?day=#{day}" : days_path(day: day.id)   %>
   <%= link_to day_link, remote: true, class: "day-link" do  %>
