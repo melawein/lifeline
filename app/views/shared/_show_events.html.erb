@@ -1,69 +1,86 @@
 <div class="show-box">
   <% if day.nil? %>
-<!--   <span class="show-info">
+  <span class="show-info">
+
 
      <span> <i class="fas fa-spinner"></i> No information entered for this day</span></span>
- -->
-  <% else %>
 
-  <div class="d-flex flex-row-reverse box-date"><%= day.date.strftime("%A, %b %d") %>
+   <% else %>
+   <div class="d-flex flex-row-reverse box-date"><%= day.date.strftime("%A, %b %d") %>
 
-  </div>
-  <% day.all_events_today.each do |event| %>
-  <div class="d-flex justify-content-start align-items-center">
+   </div>
+   <% day.all_events_today(current_user).each do |event| %>
+   <div class="d-flex justify-content-start align-items-center">
     <% if event.is_a?(Mood) %>
     <span> <div class="mood-event-show"> <% @moods.each do |mood| %>
-              <%= link_to "X", mood_path(mood),
-              method: :delete,
-              data: { confirm: "Are you sure?" }, class: "delete-but" %>
+      <%= link_to "X", mood_path(mood),
+      method: :delete, remote: true,
+      data: { confirm: "Are you sure?" }, class: "delete-but" %>
 
-              <% end %></div></span>
-    <span class="show-info">
-      <span id="mood-name"><%= event.class %></span>
-      <span id="mood-info"> <%= event.feeling %></span></span>
-
-
-      <% elsif event.is_a?(Exercise) %>
-      <span><div class="exercise-event-show"><% @exercises.each do |exercise| %>
- <%= link_to "X", exercise_path(exercise),
-              method: :delete,
-              data: { confirm: "Are you sure?" }, class: "delete-but-x" %>
-
-              <% end %></div></span>
+      <% end %></div></span>
       <span class="show-info">
-       <span id="ex-name"> <%= event.class %></span>
-       <span id="ex-info"> <%= event.time %> minutes</span></span>
-
-       <% elsif event.is_a?(Pain) %>
-       <span><div class="pain-event-show">
-         <% @pains.each do |pain| %>
- <%= link_to "X", pain_path(pain),
-              method: :delete,
-              data: { confirm: "Are you sure?" }, class: "delete-but-p" %>
-
-              <% end %></div></span>
-       <span class="show-info">
-        <span id="pain-name"><%= event.class %></span>
-        <span id="pain-info"> <%= event.symptom %></span></span>
-
-        <% elsif event.is_a?(Sleep) %>
-        <span><div class="sleep-event-show">
-          <% @sleeps.each do |sleep| %>
-          <%= link_to "X", sleep_path(sleep),
-              method: :delete,
-              data: { confirm: "Are you sure?" }, class: "delete-but-s" %>
-        <% end %></div></span>
-        <span class="show-info">
-          <span id="sleep-name"><%= event.class %></span>
-          <span id="sleep-info"> <%= event.hours %> hours</span></span>
-          <% end %>
-        </div>
-        <% end %>
-<% end %>
+        <span id="mood-name"><%= event.class %></span>
+        <span id="mood-info"> <%= event.feeling %></span></span>
 
 
+        <% elsif event.is_a?(Exercise) %>
+        <span><div class="exercise-event-show"><% @exercises.each do |exercise| %>
+         <%= link_to "X", exercise_path(exercise),
+         method: :delete,
+         data: { confirm: "Are you sure?" }, class: "delete-but-x" %>
+
+         <% end %></div></span>
+         <span class="show-info">
+           <span id="ex-name"> <%= event.class %></span>
+           <span id="ex-info"> <%= event.time %> minutes</span></span>
+
+           <% elsif event.is_a?(Pain) %>
+           <span><div class="pain-event-show">
+             <% @pains.each do |pain| %>
+             <%= link_to "X", pain_path(pain),
+             method: :delete,
+             data: { confirm: "Are you sure?" }, class: "delete-but-p" %>
+
+             <% end %></div></span>
+             <span class="show-info">
+              <span id="pain-name"><%= event.class %></span>
+              <span id="pain-info"> <%= event.symptom %></span></span>
+
+              <% elsif event.is_a?(Sleep) %>
+              <span><div class="sleep-event-show">
+                <% @sleeps.each do |sleep| %>
+                <%= link_to "X", sleep_path(sleep),
+                method: :delete,
+                data: { confirm: "Are you sure?" }, class: "delete-but-s" %>
+                <% end %></div></span>
+                <span class="show-info">
+                  <span id="sleep-name"><%= event.class %></span>
+                  <span id="sleep-info"> <%= event.hours %> hours</span></span>
+                  <% end %>
+                </div>
+                <% end %>
+                <% end %>
+
+
+
+              </div>
 
             </div>
 
-</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

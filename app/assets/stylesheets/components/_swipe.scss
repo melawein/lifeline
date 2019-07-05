@@ -43,9 +43,10 @@ span {
   // font-size: 18px;
   // font-weight: bold;
   // padding: 10px;
-  opacity: 0.3;
+  // opacity: 0.3;
   border-bottom: 5px solid transparent;
   text-decoration: none;
+  font-weight: bold;
 }
 .tab:hover {
   opacity: 1;
@@ -54,7 +55,7 @@ span {
   opacity: 1;
   font-size: 40px;
   font-weight: bold;
-  border-bottom: 3px solid black;
+  border-bottom: 4px solid #48494A;
 }
 
 

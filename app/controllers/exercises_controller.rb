@@ -5,8 +5,8 @@ class ExercisesController < ApplicationController
   end
 
   def create
-    time = params[:exercise][:time]
 
+    time = params[:exercise][:time]
 
     date = Date.new(params["day"]["date(1i)"].to_i, params["day"]["date(2i)"].to_i, params["day"]["date(3i)"].to_i)
     day = Day.find_by(date: date, user: current_user)
@@ -22,14 +22,18 @@ class ExercisesController < ApplicationController
       render :new
     end
 
-     def destroy
-    # feelings = params[:feeling]
+    def destroy
 
-    @exercise = Exercise.find(params[:id])
-    day = @exercise.day
-    authorize @exercise
-    @exercise.destroy
-    redirect_to days_path
+      @exercise = Exercise.find(params[:id])
+      day = @exercise.day
+      authorize @exercise
+      @exercise.destroy
+      redirect_to days_path
+
+      respond_to do |format|
+        format.html
+        format.js
+      end
     end
   end
 

@@ -11,3 +11,6 @@ class User < ApplicationRecord
   has_many :days
 
 end
+
+
+# self.days.where(date: day.date)[0].moods
