@@ -11,18 +11,23 @@
 }
 
 .option-swipe {
-  font-size: 40px;
+  font-size: 18px;
   display: flex;
   font-family: 'Comfortaa', cursive;
   color: black;
   overflow-x: scroll;
   overflow-y: hidden;
   padding: 10px;
-  background-color: white;
+  // background-color: white;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  text-decoration: none;
+
   a {
     color: black;
     flex-wrap: wrap;
     text-align: center;
+    text-decoration: none;
   }
 }
 
@@ -53,29 +58,90 @@ span {
 }
 .tab.actives {
   opacity: 1;
-  font-size: 40px;
+  font-size: 18px;
   font-weight: bold;
-  border-bottom: 4px solid #48494A;
+
+}
+
+.tab.actives.moods {
+  background-color: $mood;
+  border: 4px solid;
+  a {
+  text-decoration: none;
+    color: white;
+  }
+}
+
+.tab.actives.pains {
+  background-color: $pain;
+  border: 4px solid;
+  a {
+    text-decoration: none;
+    color: white;
+  }
+}
+
+.tab.actives.sleeps {
+  background-color: $sleep;
+  border: 4px solid;
+  a {
+    text-decoration: none;
+    color: white;
+  }
+}
+
+.tab.actives.exercises {
+  background-color: $exercise;
+  border: 4px solid;
+  a {
+    text-decoration: none;
+    color: white;
+  }
+}
+
+.moods {
+  color: $mood !important;
+  background-color: white;
+  padding: 5px 10px;
+  opacity: 0.7;
+  border-radius: 5px;
+  text-align: center;
+  border: 4px solid ;
 }
 
 
-
-.moods a {
- color: $mood !important;
-}
-
-
-.pains a {
+.pains {
   color: $pain;
+  background-color: white;
+  padding: 5px 10px;
+  opacity: 0.7;
+  border-radius: 5px;
+  text-align: center;
+  border: 4px solid;
+
 }
 
-.sleeps a {
+.sleeps {
   color: $sleep;
+ background-color: white;
+  padding: 5px 10px;
+  opacity: 0.7;
+  border-radius: 5px;
+  text-align: center;
+  border: 4px solid;
+
 }
 
 
-.exercises a {
+.exercises {
   color: $exercise;
+ background-color: white;
+  padding: 5px 10px;
+  opacity: 0.7;
+  border-radius: 5px;
+  text-align: center;
+  border: 4px solid;
+
 }
 
 .cal-swipe {
@@ -85,25 +151,17 @@ span {
   }
 }
 
-// #day_date_1i {
-//   display: none;
-// }
+#day_date_1i {
+  display: none;
+}
 
-// #day_date_2i {
-//   display: none;
-// }
+#day_date_2i {
+  display: none;
+}
 
-// #day_date_3i {
-//   display: none;
-// }
-
-
-
-
-
-
-
-
+#day_date_3i {
+  display: none;
+}
 
 
 

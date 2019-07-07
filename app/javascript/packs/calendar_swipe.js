@@ -1,7 +1,8 @@
+import $ from 'jquery';
+
 const calendarSwipe = () => {
   const month = document.querySelector('.calendar-title');
   const day = document.querySelector('day');
-
 
 
   let yearInput = document.querySelector('#day_date_1i');
@@ -16,9 +17,10 @@ const calendarSwipe = () => {
 
 }
 
-
-
-
+  var d = new Date();
+  var n = d.getDate();
+  var today = $(`a:contains('${n}')`);
+  today.addClass('week-active')
 
 
   let dayInput = document.querySelector('#day_date_3i');
@@ -32,10 +34,10 @@ const calendarSwipe = () => {
       let selectedDate = event.target;
 
       days.forEach((day)=> {
-        day.classList.remove('active');
+      day.classList.remove('week-active');
         let remove = dayInput.options[dayInput.options.selectedIndex].removeAttribute('selected');
       })
-      selectedDate.classList.add('active');
+      selectedDate.classList.add('week-active');
       let options = dayInput.selectedOptions;
       let day = selectedDate.innerHTML
 

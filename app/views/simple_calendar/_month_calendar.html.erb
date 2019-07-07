@@ -38,17 +38,4 @@
 
 
 
-<script>
-  const days = document.querySelectorAll('.day-link');
-  days.forEach((day)=> {
-    day.addEventListener('click', (event)=>{
-      let selectedDate = event.target;
-      days.forEach((day)=> {
-        day.classList.remove('active');
-      })
-      selectedDate.classList.add('active');
-      console.log(selectedDate);
-    })
-  })
-
-</script>
+<%= javascript_pack_tag 'month_cal' %>

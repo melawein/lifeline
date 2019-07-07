@@ -13,11 +13,21 @@
     <%= f.input :hours, collection: Sleep::HOURS %>
     <div class="sleep-date">
       <span class="sleep-field"> <%= date_select("day", "date") %></span>
+      <%= calendar(number_of_days: 5, attribute: :s_day) do |date| %>
+        <% day = Day.find_by(date: date.to_datetime, user_id: current_user) %>
+      <% day_link  =  day.nil? ? "#" : days_path(day: day.id)   %>
+      <%= link_to day_link, remote: true, class: "day-link" do  %>
+        <%= date.day %>
+      <% end %>
+  <% end %>
 
-    <%= f.submit 'Done', class: "btn btn-sm btn-info btn-sleep" %>
+    <%= f.submit 'Add', class: "btn btn-sm btn-info btn-sleep btn-block" %>
   </div>
   <% end %>
 
 
   <%= javascript_pack_tag 'slider_sleep' %>
   <%= stylesheet_pack_tag 'slider_sleep' %>
+
+
+<%= javascript_pack_tag 'calendar_swipe' %>

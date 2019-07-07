@@ -12,11 +12,10 @@
   <div class="slider-mood">
   </div>
 </div>
-
 <%= simple_form_for(@mood) do |f| %>
 <%= select_tag :feeling, options_for_select(Mood::FEELING), multiple: true %>
 <div class="mood-date">
-<span class="mood-field"><%= date_select("day", "date")  %></span>
+<span class="mood-field"><%= date_select("day", "date",selected: Date.today) %></span>
 </div>
 <%= calendar(number_of_days: 5, attribute: :s_day) do |date| %>
   <% day = Day.find_by(date: date.to_datetime, user_id: current_user) %>
@@ -25,9 +24,10 @@
     <%= date.day %>
   <% end %>
   <% end %>
-<%= f.submit 'Done', class: "btn btn-primary btn-sm btn-mood"%>
+<%= f.submit 'Add', class: "btn btn-primary btn-sm btn-mood btn-block"%>
 
 <% end %>
+
 
 
 <%= javascript_pack_tag 'slider_mood' %>
