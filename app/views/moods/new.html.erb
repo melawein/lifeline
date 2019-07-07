@@ -16,15 +16,22 @@
 <%= simple_form_for(@mood) do |f| %>
 <%= select_tag :feeling, options_for_select(Mood::FEELING), multiple: true %>
 <div class="mood-date">
-<span class="mood-field"><%= date_select("day", "date") %></span>
-<%= f.submit 'Done', class: "btn btn-primary btn-sm btn-mood"%>
+<span class="mood-field"><%= date_select("day", "date")  %></span>
 </div>
+<%= calendar(number_of_days: 5, attribute: :s_day) do |date| %>
+  <% day = Day.find_by(date: date.to_datetime, user_id: current_user) %>
+  <% day_link  =  day.nil? ? "#" : days_path(day: day.id)   %>
+  <%= link_to day_link, remote: true, class: "day-link" do  %>
+    <%= date.day %>
+  <% end %>
+  <% end %>
+<%= f.submit 'Done', class: "btn btn-primary btn-sm btn-mood"%>
+
 <% end %>
-
-
 
 
 <%= javascript_pack_tag 'slider_mood' %>
 <%= stylesheet_pack_tag 'slider_mood' %>
 
+<%= javascript_pack_tag 'calendar_swipe' %>
 
