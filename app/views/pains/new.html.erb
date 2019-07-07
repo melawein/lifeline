@@ -16,10 +16,19 @@
   <div class="pain-date">
 
     <span class="pain-field"><%= date_select("day", "date") %></span>
-    <span class="btn btn-danger btn-sm btn-pain" ><%= f.submit 'Done'%></span>
+    <%= calendar(number_of_days: 5, attribute: :s_day) do |date| %>
+        <% day = Day.find_by(date: date.to_datetime, user_id: current_user) %>
+      <% day_link  =  day.nil? ? "#" : days_path(day: day.id)   %>
+      <%= link_to day_link, remote: true, class: "day-link" do  %>
+        <%= date.day %>
+      <% end %>
+  <% end %>
+    <span class="btn btn-danger btn-sm btn-pain btn-block" ><%= f.submit 'Add'%></span>
   </div>
 
   <% end %>
 
   <%= javascript_pack_tag 'slider_pain' %>
   <%= stylesheet_pack_tag 'slider_pain' %>
+
+<%= javascript_pack_tag 'calendar_swipe' %>

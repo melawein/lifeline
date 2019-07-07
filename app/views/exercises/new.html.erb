@@ -13,9 +13,18 @@
   <%= f.input :time, collection: Exercise::TIME, input_html: { class: 'd-none'}, label_html: {class: 'd-none'} %>
   <div class="exercise-date">
     <span class="exercise-field"><%= date_select("day", "date") %></span>
-    <%= f.submit 'Done', class: "btn btn-warning btn-sm btn-exercise"%>
+    <%= calendar(number_of_days: 5, attribute: :s_day) do |date| %>
+        <% day = Day.find_by(date: date.to_datetime, user_id: current_user) %>
+      <% day_link  =  day.nil? ? "#" : days_path(day: day.id)   %>
+      <%= link_to day_link, remote: true, class: "day-link" do  %>
+        <%= date.day %>
+      <% end %>
+  <% end %>
+    <%= f.submit 'Done', class: "btn btn-warning btn-sm btn-exercise btn-block", style: "color: white;"%>
 </div>
   <% end %>
 
 <%= javascript_pack_tag 'slider_exercise' %>
 <%= stylesheet_pack_tag 'slider_exercise' %>
+
+<%= javascript_pack_tag 'calendar_swipe' %>

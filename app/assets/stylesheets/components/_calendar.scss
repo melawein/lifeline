@@ -18,6 +18,10 @@ th {
 
 }
 
+.day-cal {
+  text-align: center;
+}
+
 td {
 border-top-color: white !important;
 padding: 0px !important;
@@ -51,6 +55,10 @@ color: white !important;
 
 }
 
+.day-link a {
+  text-align: center;
+}
+
 
 //#text
 .table-striped tbody tr:nth-of-type(odd) {
@@ -76,3 +84,31 @@ color: white !important;
   padding-bottom: 12px;
   text-align: center;
 }
+
+
+
+.week-active {
+  background-color: #9A999B;
+  border-radius: 10px !important;
+  color: white !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
