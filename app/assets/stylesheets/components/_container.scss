@@ -1,8 +1,14 @@
 .container-home {
-  padding-top: 8%;
+  padding-top: 6%;
   margin-left: 3%;
   margin-right: 3%;
-
+// background: rgba(0, 0, 0, 0.5);
+// text-align: center;
+//   padding-top: 20px;
+//   padding-bottom: 20px;
+//   border-radius: 10px;
+//   margin-right: 20px;
+//   margin-left: 20px;
   h1 {
     font-size: 50px;
     text-align: center;
@@ -11,4 +17,19 @@
     font-weight: bold;
 
   }
+}
+
+
+.get-started {
+  //background-color: rgba(249, 249, 249, 0.5);
+  //background: rgba(0, 0, 0, 0.5);
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-top: 40px;
+  margin-right: 20px;
+  margin-left: 20px;
+
+ vertical-align: center;
+ border-radius: 10px;
 }

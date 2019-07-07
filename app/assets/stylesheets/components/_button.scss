@@ -1,3 +1,21 @@
+.but-home {
+  background: rgba(249, 249, 249, 0.5);
+  //border: thin 5px rgba(0, 0, 0, 0.5);
+
+  color: $sleep;
+  border-radius: 5px;
+  padding:30px;
+  font-weight: bold;
+  font-size: 22px;
+  font-family: 'Raleway', sans-serif;
+
+}
+
+.fa-key {
+  color: white;
+  margin: 10px;
+
+}
 .btn-mood {
   border-radius: 5px !important;
 }
