@@ -10,7 +10,7 @@
 </div>
 
   <%= simple_form_for(@exercise) do |f| %>
-  <%= f.input :time, collection: Exercise::TIME, input_html: { min: '0', step: '10' }, as: :hidden %>
+  <%= f.input :time, collection: Exercise::TIME, input_html: { class: 'd-none'}, label_html: {class: 'd-none'} %>
   <div class="exercise-date">
     <span class="exercise-field"><%= date_select("day", "date") %></span>
     <%= f.submit 'Done', class: "btn btn-warning btn-sm btn-exercise"%>
