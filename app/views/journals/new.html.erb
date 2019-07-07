@@ -1,0 +1,14 @@
+
+<body class='journal'>
+  <h5 class="journal-date"><%= Date.today.strftime("%A, %B %eth, %Y") %></h5>
+
+<%= simple_form_for @journal do |f| %>
+
+  <%= f.input :title, label:false, placeholder: "Add a title", class: "journal_title" %>
+
+
+  <%= f.input :text, as: :text, label: false, placeholder: "Tap here to start typing", class: "journal_text" %>
+
+  <%= f.button :submit, "Create", class: "btn-primary journal_btn" %>
+<% end %>
+</body>

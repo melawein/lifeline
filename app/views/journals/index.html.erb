@@ -1,0 +1,23 @@
+<body class="journal-back">
+
+
+<h3 class="journal-header">Journal</h3>
+<div class="d-flex">
+<div class="text-entry">
+  <p>T</p>
+</div>
+
+<div class="video-entry">
+   <p><i class="fas fa-video"></i></p>
+</div>
+</div>
+
+<%@journals.each do |journal| %>
+
+<div class="d-flex journal-show">
+  <span>Title: </span> <span><%= journal.title %></span>
+
+  <span>Text: </span>  <span><%= journal.text %></span>
+       </div>
+        <% end %>
+</body>
