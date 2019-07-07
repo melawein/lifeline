@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   resources :exercises, only: [:new, :create, :destroy]
   resources :sleeps, only: [:new, :create, :destroy]
   resources :stats, only: [:index]
+  resources :journals
   root to: 'pages#home'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
