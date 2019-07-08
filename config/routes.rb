@@ -7,12 +7,13 @@ Rails.application.routes.draw do
       get ':year/:month/:date' => 'my_calendar#show', :constraints => { :year => /\d{4}/, :month => /\d{1,2}/, :day => /\d{1,2}/ }
     end
   end
+  get '/stats', to: 'stats#all_stats', as: 'stats'
 
   resources :moods, only: [:new, :create, :destroy]
   resources :pains, only: [:new, :create, :destroy]
   resources :exercises, only: [:new, :create, :destroy]
   resources :sleeps, only: [:new, :create, :destroy]
-  resources :stats, only: [:index]
+  resources :stats, only: [:all_stats]
   resources :journals
   root to: 'pages#home'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

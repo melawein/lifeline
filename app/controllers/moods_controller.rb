@@ -39,11 +39,11 @@ class MoodsController < ApplicationController
     authorize @mood
     @mood.destroy
     redirect_to days_path
-    end
+  end
 
   private
 
-    def mood_params
-      params.require(:mood).permit(:feeling)
-    end
+  def mood_params
+    params.require(:mood).permit(:feeling)
+  end
 end
