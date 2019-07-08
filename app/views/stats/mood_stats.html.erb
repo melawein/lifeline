@@ -1,0 +1,35 @@
+<h3 class="mood-stat">Monthly Mood Recap</h3>
+
+<div class="hold-canvas">
+
+<canvas id="myChart" height="400"
+  data-final-moods="<%= @final_moods.to_json %>"></canvas>
+</div>
+<%= javascript_pack_tag 'chartjs' %>
+
+
+    <p class="mood-stat-header">Your monthly moments...</p>
+<div class="mood-legend d-flex justify-content-around">
+   <div class="mood-3">
+<% @order_moods.first(3).each do |mood_hash| %>
+<p><i class="fas fa-square <%= mood_hash[:feeling] %>"></i>
+  <%= mood_hash[:feeling] %>: <%= mood_hash[:r] / 5 %>x </p>
+<% end %>
+
+
+    </div>
+    <div class="mood-6">
+<% @order_moods.last(3).each do |mood_hash| %>
+<p><i class="fas fa-square <%= mood_hash[:feeling] %>"></i>
+  <%= mood_hash[:feeling] %>: <%= mood_hash[:r] / 5 %>x </p>
+<% end %>
+    </div>
+  </div>
+
+<div class="stats-bar justify-content-around">
+  <%= link_to "Mood", mood_stats_path, class: 'btn btn-outline-primary' %>
+  <%= link_to "Pain", pain_stats_path, class: 'btn btn-outline-danger' %>
+</div>
+
+
+

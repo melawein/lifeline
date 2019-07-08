@@ -7,7 +7,9 @@ Rails.application.routes.draw do
       get ':year/:month/:date' => 'my_calendar#show', :constraints => { :year => /\d{4}/, :month => /\d{1,2}/, :day => /\d{1,2}/ }
     end
   end
-  get '/stats', to: 'stats#all_stats', as: 'stats'
+  get '/mood/stats', to: 'stats#mood_stats', as: 'mood_stats'
+  get '/pain/stats', to: 'stats#pain_stats', as: 'pain_stats'
+
 
   resources :moods, only: [:new, :create, :destroy]
   resources :pains, only: [:new, :create, :destroy]

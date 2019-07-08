@@ -1,0 +1,23 @@
+<h3 class="mood-stat">Monthly Pain Recap</h3>
+
+<div class="hold-canvas">
+
+<canvas id="myChart-pain" height="400" data-pains='<%= @pains %>'
+  data-final-pains="<%= @final_pains.to_json %>"></canvas>
+</div>
+<%= javascript_pack_tag 'pain_chartjs' %>
+
+
+<div class="mood-legend d-flex justify-content-around">
+   <div class="mood-3">
+      <p><i class="fas fa-square" style="color: rgba(255, 99, 132);"></i>  Back</p>
+      <p><i class="fas fa-square" style="color: rgba(255, 159, 64);"></i>  Chest</p>
+    </div>
+    <div class="mood-6">
+      <p><i class="fas fa-square" style="color: rgba(75, 192, 192)"></i>  Head</p>
+      <p><i class="fas fa-square" style="color: rgba(255, 206, 86)"></i>  Stomach</p>
+    </div>
+  </div>
+
+<%= link_to "Mood", mood_stats_path %>
+<%= link_to "Pain", pain_stats_path %>
