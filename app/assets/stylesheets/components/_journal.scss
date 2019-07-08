@@ -62,12 +62,18 @@ outline:none !important;
    font-size: 18px;
 
 }
+
+
+
+
+
+
 .text-entry {
   width: 80px;
-    height: 80px;
+  height: 80px;
 
     font-family: 'Merriweather', serif;
-    font-size: 60px;
+    font-size: 50px;
     opacity: 0.9px;
 
     color: gray;
@@ -79,13 +85,25 @@ outline:none !important;
 
      background-color: rgba(249,249,249, 0.8);
      box-shadow: 4px 4px 8px #C0C0C0;
-     border: solid 2px #7B8CCA;
+     border: solid 4px #8093F1;
 
 
 
 
 }
 
+.text-entry p {
+max-height: 70px;
+  color: gray;
+  margin: none !important;
+
+
+}
+
+a:-webkit-any-link {
+text-decoration: none;
+    cursor: none;
+}
 .video-entry {
   width: 80px;
   height: 80px;
@@ -95,7 +113,7 @@ outline:none !important;
 display: flex;
 justify-content: center;
     box-shadow: 4px 4px 8px #C0C0C0;
-    border: solid 2px #00AFB5;
+    border: solid 4px #00AFB5;
 
 }
 
@@ -104,33 +122,38 @@ justify-content: center;
   line-height:inherit!important;
 
    color:gray;
-    font-size: 50px;
+    font-size: 46px;
 
 }
 
 .journal-header {
   padding: 20px;
   text-align: center;
-  color: white;
+  color: black;
   font-size: 32px;
 }
 
 
 .journal-back {
-     background-image: url("https://images.unsplash.com/photo-1420136390439-1482fc2ce4b9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1655&q=80");
-  background-size: cover;
-  background-position: center;
+    // background-image: url("https://images.unsplash.com/photo-1420136390439-1482fc2ce4b9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1655&q=80");
+  //background-size: cover;
+  //background-position: center;
   height: calc(100vh - 60px);
   align-items: center;
+  background-color: white;
+}
+.journal-border {
+
+  border-top: solid 1px gray;
+
 }
 
-
 .journal-show {
-  background-color: rgba(249,249,249, 0.8);
+  background-color:white;
   overflow: hidden;
   height: 90px;
   // background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  //box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
   align-items: center;
   border-bottom: solid 1px gray;
@@ -175,8 +198,8 @@ justify-content: center;
 }
 
 .text-entry-2 {
-  width: 60px;
-    height: 60px;
+  width: 55px;
+    height: 55px;
     background-color: black;
     font-family: 'Merriweather', serif;
     font-size: 60px;
@@ -189,7 +212,7 @@ border-radius: 5px;
 
      background-color: rgba(249,249,249, 0.8);
      box-shadow: 4px 4px 8px #C0C0C0;
-    border: solid 2px #7B8CCA;
+    border: solid 4px #8093F1;
 
 
 }
@@ -198,6 +221,8 @@ border-radius: 5px;
 .text-entry-2 p {
   font-size: 35px;
   color: gray;
+margin: 0;
+
 
 }
 
