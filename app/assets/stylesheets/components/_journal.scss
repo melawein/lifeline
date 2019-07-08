@@ -17,7 +17,7 @@ margin-right:16px;
 .journal_title input{
 background-color: transparent;
 width: 90%;
-outline: none !important;
+
 
 }
 
@@ -209,11 +209,17 @@ border-radius: 5px;
 }
 
 .show-fas {
-  right: 250px !important;
+
   color: #C0C0C0;
   position: absolute;
 
   left: 340px;
 }
 
+.card-date {
+  position: absolute;
+  top:0;
+
+  left: 230px;
+}
 
