@@ -17,12 +17,14 @@ margin-right:16px;
 .journal_title input{
 background-color: transparent;
 width: 90%;
+outline: none !important;
 
 }
 
 .journal_text {
   margin-left: 16px;
 margin-right:16px;
+
 }
 
 .journal_text textarea {
@@ -31,6 +33,7 @@ margin-right:16px;
 width: 90%;
 margin-left: 16px;
 margin-right:16px;
+outline:none !important;
 
 
 }
@@ -48,10 +51,17 @@ margin-right:16px;
 .journal-date {
   text-align: center;
   padding-top: 20px;
-  background-color: #91C4F2;
+  padding-bottom: 20px;
+  background-color: #ACBEA3;
+  color: white;
 }
 
+.journal-btn {
+  color: white;
+   font-family: 'Raleway', sans-serif;
+   font-size: 18px;
 
+}
 .text-entry {
   width: 80px;
     height: 80px;
@@ -118,7 +128,7 @@ justify-content: center;
 .journal-show {
   background-color: rgba(249,249,249, 0.8);
   overflow: hidden;
-  height: 100px;
+  height: 90px;
   // background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
@@ -194,7 +204,7 @@ border-radius: 5px;
 .journal-icons {
   display: flex;
   justify-content: center;
-  margin-bottom: 40px;
+  margin-bottom: 60px;
   margin-top: 20px;
 }
 
@@ -205,3 +215,5 @@ border-radius: 5px;
 
   left: 340px;
 }
+
+
