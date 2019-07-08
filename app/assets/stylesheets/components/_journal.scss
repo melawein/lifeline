@@ -53,42 +53,47 @@ margin-right:16px;
 
 
 .text-entry {
-  width: 100px;
-    height: 100px;
-    background-color: black;
+  width: 80px;
+    height: 80px;
+
     font-family: 'Merriweather', serif;
     font-size: 60px;
     opacity: 0.9px;
 
     color: gray;
-    border-radius: 10px;
+    border-radius: 8px;
+
     text-align: center;
     vertical-align: middle;
-    margin: 20px;
-    margin-left: 70px;
-     background: rgba(249,249,249, 0.7);
+    margin-right: 30px;
+
+     background-color: rgba(249,249,249, 0.8);
      box-shadow: 4px 4px 8px #C0C0C0;
+     border: solid 2px #7B8CCA;
+
 
 
 
 }
 
 .video-entry {
-  width: 100px;
-  height: 100px;
-   background: rgba(249,249,249, 0.7);
-  border-radius: 10px;
-
-  text-align: center;
-    margin: 20px;
+  width: 80px;
+  height: 80px;
+   background-color: rgba(249,249,249, 0.8);
+   //background: #217092;
+  border-radius: 8px;
+display: flex;
+justify-content: center;
     box-shadow: 4px 4px 8px #C0C0C0;
+    border: solid 2px #00AFB5;
 
 }
 
 
 .video-entry .fas {
-  padding: 22px;
-   color: gray;
+  line-height:inherit!important;
+
+   color:gray;
     font-size: 50px;
 
 }
@@ -106,10 +111,97 @@ margin-right:16px;
   background-size: cover;
   background-position: center;
   height: calc(100vh - 60px);
+  align-items: center;
 }
 
 
 .journal-show {
-  background-color: rgba(249,249,249, 0.5);
+  background-color: rgba(249,249,249, 0.8);
+  overflow: hidden;
+  height: 100px;
+  // background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  border-bottom: solid 1px gray;
+  position: relative;
 
+
+
+
+}
+
+.journal-show h4 {
+  font-size: 15px;
+  font-weight: bold;
+  margin: 0;
+
+}
+
+.journal-show p {
+  font-size: 12px;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 0;
+  margin-top: 8px;
+
+}
+
+.journal-show .journal-info {
+  padding: 16px;
+
+
+}
+
+.journal-info {
+  align-items: stretch;
+}
+
+
+.jorunal-show p {
+  height: 100%;
+  width: 120px;
+  object-fit: cover;
+}
+
+.text-entry-2 {
+  width: 60px;
+    height: 60px;
+    background-color: black;
+    font-family: 'Merriweather', serif;
+    font-size: 60px;
+    opacity: 0.9px;
+margin-left: 15px;
+    color: white;
+border-radius: 5px;
+    text-align: center;
+    vertical-align: middle;
+
+     background-color: rgba(249,249,249, 0.8);
+     box-shadow: 4px 4px 8px #C0C0C0;
+    border: solid 2px #7B8CCA;
+
+
+}
+
+
+.text-entry-2 p {
+  font-size: 35px;
+  color: gray;
+
+}
+
+.journal-icons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+  margin-top: 20px;
+}
+
+.show-fas {
+  right: 250px !important;
+  color: #C0C0C0;
+  position: absolute;
+
+  left: 340px;
 }

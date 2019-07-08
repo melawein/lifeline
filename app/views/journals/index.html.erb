@@ -2,22 +2,40 @@
 
 
 <h3 class="journal-header">Journal</h3>
-<div class="d-flex">
-<div class="text-entry">
-  <p>T</p>
+  <div class="journal-icons">
+    <div class="text-entry">
+      <p>T</p>
+  </div>
+    <div class="video-entry">
+      <p><i class="fas fa-video"></i></p>
+    </div>
 </div>
 
-<div class="video-entry">
-   <p><i class="fas fa-video"></i></p>
-</div>
-</div>
 
-<%@journals.each do |journal| %>
 
-<div class="d-flex journal-show">
-  <span>Title: </span> <span><%= journal.title %></span>
 
-  <span>Text: </span>  <span><%= journal.text %></span>
-       </div>
-        <% end %>
+
+    <%@journals.each do |journal| %>
+<div class="journal-show">
+  <div class="text-entry-2">
+      <p class="text-icon">T</p>
+  </div>
+ <!--  <div class="d-flex bd-highlight mb-3"> -->
+  <div class="journal-info">
+
+
+        <h4 ><%= journal.title %></h4>
+        <p ><%= journal.text %></p>
+   </div>
+   <i class='fas fa-chevron-right show-fas'></i>
+   <!-- </div> -->
+   </div>
+      <% end %>
+
+
+
 </body>
+
+
+
+
