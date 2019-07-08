@@ -14,7 +14,7 @@
     <% if event.is_a?(Mood) %>
     <span> <div class="mood-event-show"> <% @moods.each do |mood| %>
       <%= link_to "X", mood_path(mood),
-      method: :delete, remote: true,
+      method: :delete,
       data: { confirm: "Are you sure?" }, class: "delete-but" %>
 
       <% end %></div></span>

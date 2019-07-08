@@ -143,7 +143,8 @@ justify-content: center;
   background-color: white;
 }
 .journal-border {
-
+max-height: 500px;
+overflow: scroll;
   border-top: solid 1px gray;
 
 }
@@ -248,3 +249,7 @@ margin: 0;
   left: 230px;
 }
 
+
+// // .was-validated .form-control:valid, .form-control.is-valid {
+//   border-color: white;
+// }

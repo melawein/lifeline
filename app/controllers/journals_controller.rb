@@ -1,10 +1,12 @@
 class JournalsController < ApplicationController
+
+  before_action :set_journal, only: [:show, :edit, :destroy, :update]
   def index
-    @journals = policy_scope(Journal)
+    @journals = policy_scope(Journal).order(created_at: :desc)
   end
 
   def show
-    @journal = Journal.find(params[:id])
+    # @journal = Journal.find(params[:id])
       authorize @journal
   end
 
@@ -29,9 +31,11 @@ class JournalsController < ApplicationController
   end
 
   def edit
+# authorize @journal
   end
 
   def update
+# authorize @journal
     if @journal.update(journal_params)
       redirect_to @journal, notice: 'Journal was successfully updated.'
     else
@@ -40,13 +44,18 @@ class JournalsController < ApplicationController
   end
 
   def destroy
-    @journal = Journal.find(params[:id])
     @journal.destroy
     redirect_to journals_path
   end
+
   private
 
   def journal_params
     params.require(:journal).permit(:title, :text)
   end
+
+  def set_journal
+      @journal = Journal.find(params[:id])
+      authorize @journal
+    end
 end
