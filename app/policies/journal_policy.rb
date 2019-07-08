@@ -11,7 +11,7 @@ class JournalPolicy < ApplicationPolicy
   end
 
   def show?
-    false
+    true
   end
 
   def create?

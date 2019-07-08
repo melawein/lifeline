@@ -18,11 +18,13 @@ margin-right:16px;
 background-color: transparent;
 width: 90%;
 
+
 }
 
 .journal_text {
   margin-left: 16px;
 margin-right:16px;
+
 }
 
 .journal_text textarea {
@@ -31,6 +33,7 @@ margin-right:16px;
 width: 90%;
 margin-left: 16px;
 margin-right:16px;
+outline:none !important;
 
 
 }
@@ -48,68 +51,200 @@ margin-right:16px;
 .journal-date {
   text-align: center;
   padding-top: 20px;
-  background-color: #91C4F2;
+  padding-bottom: 20px;
+  background-color: #ACBEA3;
+  color: white;
 }
+
+.journal-btn {
+  color: white;
+   font-family: 'Raleway', sans-serif;
+   font-size: 18px;
+
+}
+
+
+
+
 
 
 .text-entry {
-  width: 100px;
-    height: 100px;
-    background-color: black;
+  width: 80px;
+  height: 80px;
+
     font-family: 'Merriweather', serif;
-    font-size: 60px;
+    font-size: 50px;
     opacity: 0.9px;
 
     color: gray;
-    border-radius: 10px;
+    border-radius: 8px;
+
     text-align: center;
     vertical-align: middle;
-    margin: 20px;
-    margin-left: 70px;
-     background: rgba(249,249,249, 0.7);
+    margin-right: 30px;
+
+     background-color: rgba(249,249,249, 0.8);
      box-shadow: 4px 4px 8px #C0C0C0;
+     border: solid 4px #8093F1;
+
 
 
 
 }
 
-.video-entry {
-  width: 100px;
-  height: 100px;
-   background: rgba(249,249,249, 0.7);
-  border-radius: 10px;
+.text-entry p {
+max-height: 70px;
+  color: gray;
+  margin: none !important;
 
-  text-align: center;
-    margin: 20px;
+
+}
+
+a:-webkit-any-link {
+text-decoration: none;
+    cursor: none;
+}
+.video-entry {
+  width: 80px;
+  height: 80px;
+   background-color: rgba(249,249,249, 0.8);
+   //background: #217092;
+  border-radius: 8px;
+display: flex;
+justify-content: center;
     box-shadow: 4px 4px 8px #C0C0C0;
+    border: solid 4px #00AFB5;
 
 }
 
 
 .video-entry .fas {
-  padding: 22px;
-   color: gray;
-    font-size: 50px;
+  line-height:inherit!important;
+
+   color:gray;
+    font-size: 46px;
 
 }
 
 .journal-header {
   padding: 20px;
   text-align: center;
-  color: white;
+  color: black;
   font-size: 32px;
 }
 
 
 .journal-back {
-     background-image: url("https://images.unsplash.com/photo-1420136390439-1482fc2ce4b9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1655&q=80");
-  background-size: cover;
-  background-position: center;
+    // background-image: url("https://images.unsplash.com/photo-1420136390439-1482fc2ce4b9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1655&q=80");
+  //background-size: cover;
+  //background-position: center;
   height: calc(100vh - 60px);
+  align-items: center;
+  background-color: white;
 }
+.journal-border {
 
+  border-top: solid 1px gray;
+
+}
 
 .journal-show {
-  background-color: rgba(249,249,249, 0.5);
+  background-color:white;
+  overflow: hidden;
+  height: 90px;
+  // background: white;
+  //box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  border-bottom: solid 1px gray;
+  position: relative;
+
+
+
 
 }
+
+.journal-show h4 {
+  font-size: 15px;
+  font-weight: bold;
+  margin: 0;
+
+}
+
+.journal-show p {
+  font-size: 12px;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 0;
+  margin-top: 8px;
+
+}
+
+.journal-show .journal-info {
+  padding: 16px;
+
+
+}
+
+.journal-info {
+  align-items: stretch;
+}
+
+
+.jorunal-show p {
+  height: 100%;
+  width: 120px;
+  object-fit: cover;
+}
+
+.text-entry-2 {
+  width: 55px;
+    height: 55px;
+    background-color: black;
+    font-family: 'Merriweather', serif;
+    font-size: 60px;
+    opacity: 0.9px;
+margin-left: 15px;
+    color: white;
+border-radius: 5px;
+    text-align: center;
+    vertical-align: middle;
+
+     background-color: rgba(249,249,249, 0.8);
+     box-shadow: 4px 4px 8px #C0C0C0;
+    border: solid 4px #8093F1;
+
+
+}
+
+
+.text-entry-2 p {
+  font-size: 35px;
+  color: gray;
+margin: 0;
+
+
+}
+
+.journal-icons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 60px;
+  margin-top: 20px;
+}
+
+.show-fas {
+
+  color: #C0C0C0;
+  position: absolute;
+
+  left: 340px;
+}
+
+.card-date {
+  position: absolute;
+  top:0;
+
+  left: 230px;
+}
+
