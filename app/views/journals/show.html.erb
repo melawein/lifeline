@@ -1,2 +1,18 @@
-<h1>Journals#show</h1>
-<p>Find me in app/views/journals/show.html.erb</p>
+<body class="show-background">
+
+<div class="journal-options d-flex bd-highlight mb-3">
+  <h6 class="show-date mr-auto p-2 bd-highlight"><%= @journal.created_at.strftime("%A, %B %eth, %Y") %></h6>
+
+<%= link_to edit_journal_path(@journal) do %>
+<i class="fas fa-pencil-alt journal-ed p-2 bd-highlight"></i>
+<% end %>
+
+<%= link_to journal_path(@journal), method: :delete,
+      data: { confirm: "Are you sure?" } do %>
+<i class="fas fa-trash journal-del p-2 bd-highlight"></i>
+<% end %>
+</div>
+<h5 class="show-title"><%= @journal.title %></h5>
+
+<p class="show-text"><%= @journal.text %></p>
+</body>

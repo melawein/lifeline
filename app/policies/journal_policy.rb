@@ -23,14 +23,16 @@ class JournalPolicy < ApplicationPolicy
   # end
 
   def update?
-    false
+        record.user == user
+
   end
 
-  def edit?
-    update?
-  end
+  # def edit?
+  #   update?
+  # end
 
   def destroy?
-    false
+    record.user == user
+
   end
 end

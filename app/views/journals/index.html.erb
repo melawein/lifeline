@@ -26,8 +26,8 @@
   <div class="journal-info">
 
           <p class="card-date"> <%= journal.created_at.strftime("%A, %B %eth, %Y") %></p>
-        <h4 ><%= journal.title %></h4>
-        <p ><%= journal.text %></p>
+        <h4 ><%= journal.title.first(12) %></h4>
+        <p ><%= journal.text.truncate_words(6) %></p>
    </div>
    <%= link_to journal_path(journal) do  %>
    <i class='fas fa-chevron-right show-fas'></i>
