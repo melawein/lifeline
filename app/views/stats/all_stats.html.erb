@@ -1,0 +1,24 @@
+<h3 class="mood-stat">Weekly moods</h3>
+
+<div class="hold-canvas">
+
+<canvas id="myChart" height="400" data-moods='<%= @moods %>'
+  data-final-moods="<%= @final_moods.to_json %>"></canvas>
+</div>
+<%= javascript_pack_tag 'chartjs' %>
+
+
+<div class="mood-legend d-flex justify-content-around">
+   <div class="mood-3">
+      <p><i class="fas fa-square" style="color: rgba(255, 99, 132);"></i>  Angry</p>
+      <p><i class="fas fa-square" style="color: rgba(255, 159, 64);"></i>  Anxious</p>
+      <p><i class="fas fa-square" style="color: rgba(255, 206, 86)"></i>  Good</p>
+    </div>
+    <div class="mood-6">
+      <p><i class="fas fa-square" style="color: rgba(75, 192, 192)"></i>  Great</p>
+      <p><i class="fas fa-square" style="color: rgba(153, 102, 255)"></i>  Okay</p>
+      <p><i class="fas fa-square" style="color: rgba(54, 162, 235)"></i>  Sad</p>
+    </div>
+  </div>
+
+</div>
