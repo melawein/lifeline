@@ -7,15 +7,15 @@ import Chart from 'chart.js';
     var myBubbleChart = new Chart(ctx, {
         type: 'bubble',
         data: {
-          // labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+          labels: ["Back", "Chest", "Head", "Stomach"],
           datasets: [{
               // labels  : ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
               data: pains,
               backgroundColor: [
-                  'rgba(165, 70, 87, .8)', // angry
-                  'rgba(255, 77, 128, .8)', // anxious
-                  'rgba(102, 0, 0, .8)', // Good
-                  'rgba(218, 85, 82, .8)', // great
+                  'rgba(165, 70, 87, .8)', // back
+                  'rgba(255, 77, 128, .8)', // chest
+                  'rgba(102, 0, 0, .8)', // head
+                  'rgba(218, 85, 82, .8)', // stomach
 
               ],
               borderColor: [
@@ -56,6 +56,15 @@ import Chart from 'chart.js';
           legend: {
             display: false,
             position: 'bottom',
+          },
+          tooltips: {
+            callbacks: {
+              label: function(tooltipItem, data) {
+                var label = data.labels[tooltipItem.index];
+                var datasetLabel = data.datasets[tooltipItem.datasetIndex].label || '';
+                return label;
+              }
+            }
           }
         }
 

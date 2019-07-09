@@ -17,9 +17,9 @@ User.destroy_all
 puts 'Creating users...'
 users_attributes = [
   {
-    first_name:   'Gabby',
+    first_name:   'Melissa',
     last_name:  'Simon',
-    email:  'gab@petpal.com',
+    email:  'mel@lifeline.com',
     password:        '123456',
     phone_number: '123456789'
   }

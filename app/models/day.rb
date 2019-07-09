@@ -1,6 +1,6 @@
 class Day < ApplicationRecord
   belongs_to :user
-  has_many :exercises
+  has_one :exercise
   has_many :moods
   has_many :pains
   has_many :sleeps

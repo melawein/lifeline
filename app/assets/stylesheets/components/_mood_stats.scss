@@ -1,8 +1,21 @@
   #myChart {
-    /*height: 70vh !important;*/
+    height: 50vh !important;
     background-color: rgba(255, 255, 255, 0.4);
     /*width: 100% !important;*/
   }
+
+  #myChart-exercise {
+    height: 55vh !important;
+    // background-color: rgba(255, 255, 255, 0.4);
+  }
+
+  .stat-ex-header {
+    text-align: center;
+    padding-top: 15px;
+    padding-right: 5px;
+    padding-left: 5px;
+  }
+
   .hold-canvas {
     width: 100vw;
     padding: 20px;
@@ -14,7 +27,8 @@
   background-color: rgba(255, 255, 255, .5);
   margin: 0px 20px;
   padding-top: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
+  padding-left: 30px;
 }
 
 .mood-stat {
@@ -23,15 +37,97 @@
   font-family: 'Comfortaa', cursive;
 }
 
-
-#myChart-pain {
-  background-color: rgba(255, 255, 255, 0.4);
-}
-
-.Great {
-  font-weight: bold;
-}
-
 .mood-stat-header {
   margin: 0 auto;
 }
+
+#myChart-pain {
+  background-color: rgba(255, 255, 255, 0.4);
+  height: 50vh !important;
+
+}
+
+
+
+
+.mood-stat-header {
+  margin-left: 20px;
+}
+
+
+.stats-bar {
+  text-align: center;
+}
+
+
+
+
+
+
+
+
+.Great {
+  font-weight: bold;
+  color: rgba(75, 192, 192, .6);
+}
+
+.Sad {
+  color: rgba(54, 162, 235, .6);
+}
+
+.Good {
+  color: rgba(255, 206, 86, .6);
+}
+
+
+.Okay {
+  color: rgba(153, 102, 255, .6);
+}
+
+.Angry {
+  color: rgba(255, 99, 132, .6);
+}
+
+
+.Anxious {
+  color: rgba(255, 159, 64, .6);
+}
+
+
+.Back {
+ color: rgba(165, 70, 87, .8);
+}
+
+.Chest {
+  color:rgba(255, 77, 128, .8);
+}
+
+.Head {
+  color:rgba(102, 0, 0, .8);
+}
+
+
+.Stomach {
+  color: rgba(218, 85, 82, .8);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

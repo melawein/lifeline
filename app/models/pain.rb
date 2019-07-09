@@ -1,7 +1,7 @@
 class Pain < ApplicationRecord
   belongs_to :day
 
-  SYMPTOMS = ["Head", "Stomach", "Back", "Chest"]
+  SYMPTOMS = ["Back", "Chest", "Head", "Stomach"]
 
   validates :symptom, inclusion: { in: SYMPTOMS }, presence: true
 
