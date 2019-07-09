@@ -1,0 +1,12 @@
+
+
+<div class="text-entry-2">
+  <p><i class="far fa-file-alt text-icon"></i></p>
+  </div>
+  <div class="journal-info">
+    <p class="card-date"> <%= journal.created_at.strftime("%A, %B %e, %Y") %></p>
+    <h4 ><%= journal.title.first(12) %></h4>
+    <p ><%= journal.text.truncate_words(6) %></p>
+   </div>
+
+   <i class='fas fa-chevron-right show-fas'></i>
