@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-around;
   background: white;
-  height: 60px;
+  height: 90px;
   align-items: center;
 }
 
@@ -15,5 +15,5 @@
 }
 
 .content {
-  min-height: calc(100vh - 60px);
+  min-height: calc(100vh - 110px);
 }

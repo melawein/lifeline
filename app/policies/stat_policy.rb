@@ -12,4 +12,8 @@ class StatPolicy <  Struct.new(:user, :stat)
   def exercise_stats?
     true
   end
+
+  def sleep_stats?
+    true
+  end
 end
