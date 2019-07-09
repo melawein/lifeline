@@ -3,11 +3,12 @@
   //border: thin 5px rgba(0, 0, 0, 0.5);
 
   color: $sleep;
-  border-radius: 5px;
-  padding:30px;
-  font-weight: bold;
-  font-size: 22px;
+
+  padding:22px;
+  font-size: 14px;
   font-family: 'Raleway', sans-serif;
+  overflow: wrap;
+
 
 }
 
@@ -148,25 +149,30 @@
 
 
 
+.text-button {
+  border-radius: 5px !important;
+text-align: center;
+vertical-align: center;
+  height: 50px;
+  font-size: 18px;
+  color: white;
+   background-image: linear-gradient(270deg, #028efb, #88cafc);
+   border: none;
+   width: 145px;
+}
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.video-button {
+  border-radius: 5px !important;
+text-align: center;
+vertical-align: center;
+  height: 50px;
+    font-size: 18px;
+  color: white;
+  background-image: linear-gradient(270deg, #028efb, #88cafc);
+  border:none;
+  width: 145px;
+}
 
 
 

@@ -16,7 +16,12 @@ Rails.application.routes.draw do
   resources :exercises, only: [:new, :create, :destroy]
   resources :sleeps, only: [:new, :create, :destroy]
   resources :stats, only: [:all_stats]
-  resources :journals
+  resources :journals do
+    collection do
+      get 'new_video'
+      post 'create_video'
+    end
+  end
   root to: 'pages#home'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
