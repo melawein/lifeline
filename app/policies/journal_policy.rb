@@ -21,6 +21,13 @@ class JournalPolicy < ApplicationPolicy
   # def new?
   #   create?
   # end
+  def new_video?
+    true
+
+  end
+  def create_video?
+    true
+  end
 
   def update?
         record.user == user

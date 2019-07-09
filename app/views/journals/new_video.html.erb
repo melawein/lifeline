@@ -1,0 +1,5 @@
+ <%= simple_form_for(@journal, url: create_video_journals_path, method: :post) do |f| %>
+    <%= f.input   :video %>
+    <%= f.input :video_cache, as: :hidden %>
+    <%= f.submit %>
+<% end %>
