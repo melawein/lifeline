@@ -12,6 +12,7 @@ Pain.destroy_all
 Sleep.destroy_all
 Exercise.destroy_all
 Day.destroy_all
+Journal.destroy_all
 User.destroy_all
 
 puts 'Creating users...'
