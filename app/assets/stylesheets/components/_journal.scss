@@ -7,7 +7,6 @@
 
 .journal_title {
 padding-top: 25px;
-border-bottom: 1px solid black;
 align: center;
 margin-left: 16px;
 margin-right:16px;
@@ -17,8 +16,8 @@ margin-right:16px;
 .journal_title input{
 background-color: transparent;
 width: 90%;
-
-
+font-size: 20px;
+border: none;
 }
 
 .journal_text {
@@ -33,10 +32,12 @@ margin-right:16px;
 width: 90%;
 margin-left: 16px;
 margin-right:16px;
-outline:none !important;
-
+border: none;
 
 }
+
+
+
 
 .home-page {
   background-image: url("https://images.unsplash.com/photo-1500485035595-cbe6f645feb1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80");
@@ -85,7 +86,7 @@ outline:none !important;
 
      background-color: rgba(249,249,249, 0.8);
      box-shadow: 4px 4px 8px #C0C0C0;
-     border: solid 4px #8093F1;
+     border: solid 5px #ACBEA3;;
 
 
 
@@ -113,7 +114,7 @@ text-decoration: none;
 display: flex;
 justify-content: center;
     box-shadow: 4px 4px 8px #C0C0C0;
-    border: solid 4px #00AFB5;
+    border: solid 5px #00AFB5;
 
 }
 
@@ -165,10 +166,13 @@ overflow: scroll;
 
 }
 
+
+
 .journal-show h4 {
   font-size: 15px;
   font-weight: bold;
   margin: 0;
+  color: black;
 
 }
 
@@ -178,6 +182,7 @@ overflow: scroll;
   opacity: .7;
   margin-bottom: 0;
   margin-top: 8px;
+  color: black;
 
 }
 
@@ -213,7 +218,7 @@ border-radius: 5px;
 
      background-color: rgba(249,249,249, 0.8);
      box-shadow: 4px 4px 8px #C0C0C0;
-    border: solid 4px #8093F1;
+    border: solid 5px #ACBEA3;;
 
 
 }
@@ -250,6 +255,4 @@ margin: 0;
 }
 
 
-// // .was-validated .form-control:valid, .form-control.is-valid {
-//   border-color: white;
-// }
+

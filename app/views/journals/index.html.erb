@@ -18,7 +18,8 @@
 
 <div class="journal-border">
     <%@journals.each do |journal| %>
-<div class="journal-show">
+    <%= link_to journal_path(journal), class:"journal-show" do %>
+
   <div class="text-entry-2">
       <p class="text-icon">T</p>
   </div>
@@ -29,11 +30,11 @@
         <h4 ><%= journal.title.first(12) %></h4>
         <p ><%= journal.text.truncate_words(6) %></p>
    </div>
-   <%= link_to journal_path(journal) do  %>
+
    <i class='fas fa-chevron-right show-fas'></i>
-   <% end %>
+
    <!-- </div> -->
-   </div>
+  <% end %>
       <% end %>
       </div>
 
