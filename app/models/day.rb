@@ -10,11 +10,8 @@ class Day < ApplicationRecord
 
   def all_events_today(user)
     event_day = []
-    self.exercises.each do |ex|
-      if ex.day.user == user
-        event_day << ex
-      end
-    end
+
+    event_day << self.exercise
     self.moods.each do |mo|
       if mo.day.user == user
         event_day << mo
