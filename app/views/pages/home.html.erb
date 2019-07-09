@@ -1,4 +1,7 @@
+
 <div class="home-page">
+
+
 
 <%= link_to  destroy_user_session_path, method: :delete, class: "sign-out" do  %>
   <i class="fas fa-key"></i>
@@ -9,7 +12,9 @@
 </div>
 <div class="get-started">
   <!-- <h3 id="start-head">How are you feeling?</h3> -->
-<%= link_to 'Track Your Feelings',  new_mood_path, class: "but-home" %>
+<% link_to 'Track Your Feelings',  new_mood_path, class: "but-home" %>
+</div>
+<div class="background-image" style="background-image: url('<%= image_path 'happy.svg' %>');">
 </div>
 </div>
 

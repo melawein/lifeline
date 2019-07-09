@@ -1,4 +1,6 @@
-<h3 class="stat-ex-header">Your weekly Exercise Recap</h3>
+
+<h3 class="mood-stat">Your weekly Exercise Recap</h3>
+<%= render 'shared/statswipe' %>
 
 <canvas id="myChart-exercise" width="400" height="400" data-times="<%= @times.to_json %>" data-days="<%= @day_names.to_json %>"></canvas>
 
@@ -6,8 +8,3 @@
 <%= javascript_pack_tag 'exercise_chartjs' %>
 
 
-<div class="stats-bar justify-content-around">
-  <%= link_to "Mood", mood_stats_path, class: 'btn btn-outline-primary' %>
-  <%= link_to "Pain", pain_stats_path, class: 'btn btn-outline-danger' %>
-  <%= link_to "Exercise", exercise_stats_path, class: 'btn btn-outline-warning' %>
-</div>

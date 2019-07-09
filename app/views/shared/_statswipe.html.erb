@@ -1,0 +1,24 @@
+<div class="option-swipe" data-controller="<%= params[:controller] %>">
+  <span class="tab moods"  ><%= link_to "Mood", mood_stats_path %></span>
+  <span class="tab pains"><%= link_to "Pain", pain_stats_path %></span>
+  <span class="tab sleeps"><%= link_to "Sleep", sleep_stats_path %></span>
+  <!-- <span class="tab"><i class="fas fa-chevron-right" id="arrow"></i></span> -->
+  <span class="tab exercises"><%= link_to "Exercise", exercise_stats_path %></span>
+</div>
+
+<!-- find out the params controller -->
+<!--  in js we want to find correct tab class that is same name as controller -->
+<!-- params[:controller"] = "moods" <span class="moods"></span> -->
+<!-- find span with class of params[:controller] -->
+<script>
+  const paramsControllerName = document.querySelector('.option-swipe').dataset.controller
+
+  const tabs = document.querySelectorAll('.tab');
+
+  tabs.forEach(tab => {
+    tab.classList.remove('actives');
+    if(tab.classList.contains(paramsControllerName)){
+      tab.classList.add('actives')
+    }
+  })
+</script>

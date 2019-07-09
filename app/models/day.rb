@@ -3,7 +3,7 @@ class Day < ApplicationRecord
   has_one :exercise
   has_many :moods
   has_many :pains
-  has_many :sleeps
+  has_one :sleep
 
   HOURS = (0..12).to_a
 
@@ -12,6 +12,7 @@ class Day < ApplicationRecord
     event_day = []
 
     event_day << self.exercise
+    event_day << self.sleep
     self.moods.each do |mo|
       if mo.day.user == user
         event_day << mo
@@ -20,11 +21,6 @@ class Day < ApplicationRecord
     self.pains.each do |pain|
       if pain.day.user == user
         event_day << pain
-      end
-    end
-    self.sleeps.each do |sl|
-      if sl.day.user == user
-        event_day << sl
       end
     end
     event_day

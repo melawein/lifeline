@@ -134,6 +134,29 @@ class StatsController < ApplicationController
      @day_names.reverse!
   end
 
+
+  def sleep_stats
+     authorize :stat, :sleep_stats?
+
+     @sleep = Sleep.where(user: current_user)
+
+     @days = Day.where(user: current_user)
+
+     @day_names = []
+     @hours = []
+     7.times do |i|
+       date = Date.today - i
+       day_name = date.strftime("%A")
+       @day_names << day_name
+       sleep_hours = Day.find_by(date: date)&.sleep&.hours
+       @hours << sleep_hours
+     end
+
+     @hours.reverse!
+     @day_names.reverse!
+  end
+
+
 end
 
 

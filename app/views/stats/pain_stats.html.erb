@@ -1,5 +1,11 @@
 <h3 class="mood-stat">Monthly Pain Recap</h3>
 
+<div class="stats-bar justify-content-around">
+  <%= link_to "Mood", mood_stats_path, class: 'btn btn-outline-primary' %>
+  <%= link_to "Pain", pain_stats_path, class: 'btn btn-outline-danger' %>
+  <%= link_to "Exercise", exercise_stats_path, class: 'btn btn-outline-warning' %>
+  <%= link_to "Sleep", sleep_stats_path, class: 'btn btn-outline-info'  %>
+</div>
 <div class="hold-canvas">
 
 <canvas id="myChart-pain" height="400" data-pains='<%= @pains %>'
@@ -21,8 +27,3 @@
   </div>
 </div>
 
-<div class="stats-bar justify-content-around">
-  <%= link_to "Mood", mood_stats_path, class: 'btn btn-outline-primary' %>
-  <%= link_to "Pain", pain_stats_path, class: 'btn btn-outline-danger' %>
-  <%= link_to "Exercise", exercise_stats_path, class: 'btn btn-outline-warning' %>
-</div>

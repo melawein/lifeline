@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   get '/mood/stats', to: 'stats#mood_stats', as: 'mood_stats'
   get '/pain/stats', to: 'stats#pain_stats', as: 'pain_stats'
   get '/exercise/stats', to: 'stats#exercise_stats', as: 'exercise_stats'
+  get '/sleep/stats', to: 'stats#sleep_stats', as: 'sleep_stats'
 
 
   resources :moods, only: [:new, :create, :destroy]
