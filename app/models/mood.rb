@@ -1,7 +1,7 @@
 class Mood < ApplicationRecord
   belongs_to :day
 
-  FEELING = ["Great", "Good", "Okay", "Sad", "Angry", "Anxious"]
+  FEELING = ["Angry", "Anxious", "Good", "Great", "Okay", "Sad"]
 
   validates :feeling, inclusion: { in: FEELING }, presence: true
 

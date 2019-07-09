@@ -7,7 +7,7 @@ import Chart from 'chart.js';
     var myBubbleChart = new Chart(ctx, {
         type: 'bubble',
         data: {
-          // labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+          labels: ["Angry", "Anxious", "Good", "Great", "Okay", "Sad"],
           datasets: [{
               // labels  : ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
               data: moods,
@@ -58,6 +58,15 @@ import Chart from 'chart.js';
           legend: {
             display: false,
             position: 'bottom',
+          },
+          tooltips: {
+            callbacks: {
+              label: function(tooltipItem, data) {
+                var label = data.labels[tooltipItem.index];
+                var datasetLabel = data.datasets[tooltipItem.datasetIndex].label || '';
+                return label;
+              }
+            }
           }
         }
 

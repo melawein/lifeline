@@ -9,26 +9,28 @@
 
 
     <p class="mood-stat-header">Your monthly moments...</p>
-<div class="mood-legend d-flex justify-content-around">
-   <div class="mood-3">
-<% @order_moods.first(3).each do |mood_hash| %>
-<p><i class="fas fa-square <%= mood_hash[:feeling] %>"></i>
-  <%= mood_hash[:feeling] %>: <%= mood_hash[:r] / 5 %>x </p>
-<% end %>
+<div class="mood-legend">
+      <div class="row">
+<% @order_moods.each do |mood_array| %>
 
+        <div class="col-6">
+           <!-- <div class="mood-3"> -->
 
-    </div>
-    <div class="mood-6">
-<% @order_moods.last(3).each do |mood_hash| %>
-<p><i class="fas fa-square <%= mood_hash[:feeling] %>"></i>
-  <%= mood_hash[:feeling] %>: <%= mood_hash[:r] / 5 %>x </p>
-<% end %>
-    </div>
+            <p><i class="fas fa-square <%= mood_array[0] %>"></i>
+              <%= mood_array[0] %>: <%= mood_array[1] %>x </p>
+            <!-- </div> -->
+        </div>
+
+    <% end %>
+      </div>
+
   </div>
 
 <div class="stats-bar justify-content-around">
-  <%= link_to "Mood", mood_stats_path, class: 'btn btn-outline-primary' %>
-  <%= link_to "Pain", pain_stats_path, class: 'btn btn-outline-danger' %>
+<%= link_to "Mood", mood_stats_path, class: 'btn btn-outline-primary' %>
+<%= link_to "Pain", pain_stats_path, class: 'btn btn-outline-danger' %>
+<%= link_to "Exercise", exercise_stats_path, class: 'btn btn-outline-warning' %>
+
 </div>
 
 

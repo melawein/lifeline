@@ -8,4 +8,8 @@ class StatPolicy <  Struct.new(:user, :stat)
   def pain_stats?
     true
   end
+
+  def exercise_stats?
+    true
+  end
 end

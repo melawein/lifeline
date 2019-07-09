@@ -7,17 +7,22 @@
 </div>
 <%= javascript_pack_tag 'pain_chartjs' %>
 
+<p class="mood-stat-header">Your monthly moments...</p>
 
-<div class="mood-legend d-flex justify-content-around">
-   <div class="mood-3">
-      <p><i class="fas fa-square" style="color: rgba(255, 99, 132);"></i>  Back</p>
-      <p><i class="fas fa-square" style="color: rgba(255, 159, 64);"></i>  Chest</p>
-    </div>
-    <div class="mood-6">
-      <p><i class="fas fa-square" style="color: rgba(75, 192, 192)"></i>  Head</p>
-      <p><i class="fas fa-square" style="color: rgba(255, 206, 86)"></i>  Stomach</p>
-    </div>
+<div class="mood-legend">
+  <div class="row">
+
+<% @order_pains.each do |pain_array| %>
+<div class="col-6">
+    <p><i class="fas fa-square <%= pain_array[0] %>"></i>
+      <%= pain_array[0] %>: <%= pain_array[1] %>x </p>
+</div>
+  <% end %>
   </div>
+</div>
 
-<%= link_to "Mood", mood_stats_path %>
-<%= link_to "Pain", pain_stats_path %>
+<div class="stats-bar justify-content-around">
+  <%= link_to "Mood", mood_stats_path, class: 'btn btn-outline-primary' %>
+  <%= link_to "Pain", pain_stats_path, class: 'btn btn-outline-danger' %>
+  <%= link_to "Exercise", exercise_stats_path, class: 'btn btn-outline-warning' %>
+</div>
