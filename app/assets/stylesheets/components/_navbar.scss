@@ -4,6 +4,7 @@
   background: white;
   height: 90px;
   align-items: center;
+  padding-bottom: 10px;
 }
 
 // .navbar-lewagon .navbar-collapse {
@@ -15,5 +16,5 @@
 }
 
 .content {
-  min-height: calc(100vh - 110px);
+  min-height: calc(100vh - 90px);
 }

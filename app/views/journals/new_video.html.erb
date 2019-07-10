@@ -1,5 +1,5 @@
  <%= simple_form_for(@journal, url: create_video_journals_path, method: :post) do |f| %>
-    <%= f.input   :video %>
+    <%= f.input :video, input_html: { class: 'd-none' }, label_html: { class: 'upload-video'}, label: 'Record' %>
     <%= f.input :video_cache, as: :hidden %>
-    <%= f.submit %>
+    <%= f.button :submit, "Done", class: "done-video-button"%>
 <% end %>
