@@ -1,9 +1,10 @@
-<div class="option-swipe" data-controller="<%= params[:controller] %>">
-  <span class="tab moods"  ><%= link_to "Mood", mood_stats_path %></span>
-  <span class="tab pains"><%= link_to "Pain", pain_stats_path %></span>
-  <span class="tab sleeps"><%= link_to "Sleep", sleep_stats_path %></span>
+<div class="option-swipe" data-action="<%= params[:action] %>">
+  <%#raise %>
+  <span class="tab moods mood_stats"  ><%= link_to "Mood", mood_stats_path %></span>
+  <span class="tab pains pain_stats"><%= link_to "Pain", pain_stats_path %></span>
+  <span class="tab sleeps sleep_stats"><%= link_to "Sleep", sleep_stats_path %></span>
   <!-- <span class="tab"><i class="fas fa-chevron-right" id="arrow"></i></span> -->
-  <span class="tab exercises"><%= link_to "Exercise", exercise_stats_path %></span>
+  <span class="tab exercises exercise_stats"><%= link_to "Exercise", exercise_stats_path %></span>
 </div>
 
 <!-- find out the params controller -->
@@ -11,7 +12,7 @@
 <!-- params[:controller"] = "moods" <span class="moods"></span> -->
 <!-- find span with class of params[:controller] -->
 <script>
-  const paramsControllerName = document.querySelector('.option-swipe').dataset.controller
+  const paramsControllerName = document.querySelector('.option-swipe').dataset.action
 
   const tabs = document.querySelectorAll('.tab');
 

@@ -1,11 +1,6 @@
 <h3 class="mood-stat">Your weekly Sleep Recap</h3>
 
-<div class="stats-bar-sleep justify-content-around">
-  <%= link_to "Mood", mood_stats_path, class: 'btn btn-outline-primary' %>
-  <%= link_to "Pain", pain_stats_path, class: 'btn btn-outline-danger' %>
-  <%= link_to "Exercise", exercise_stats_path, class: 'btn btn-outline-warning' %>
-  <%= link_to "Sleep", sleep_stats_path, class: 'btn btn-outline-info'  %>
-</div>
+<%= render 'shared/statswipe' %>
 
 <canvas id="myChart-sleep" width="400" height="400" data-hours="<%= @hours.to_json %>" data-days="<%= @day_names.to_json %>"></canvas>
 
