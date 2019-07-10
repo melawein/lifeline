@@ -309,6 +309,9 @@ vertical-align: center;
   margin-top: 20px;
 }
 
+.video-container-flex {
+  height: 70vh;
+}
 
 .new-vid-back {
 background-image: linear-gradient(99deg, #E3D8D3 0%, #FAF3F5 42%);
@@ -322,4 +325,8 @@ min-height: calc(100vh - 90px);
   height: 50vh;
       position: absolute;
     bottom: 242px;
+}
+
+.position-icon {
+  position: relative;
 }
