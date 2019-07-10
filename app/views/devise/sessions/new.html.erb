@@ -18,7 +18,12 @@
       </div>
     <% end %>
 
+
+  <div class="form-actions">
+    <%= f.button :submit, "Log in", class: "login btn-block" %>
+
     <%= render "devise/shared/links" %>
+
   </div>
     <div class="log-in-image" style="background-image: url('<%= image_path 'happy.svg' %>');">
   </div>
