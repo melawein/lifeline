@@ -64,12 +64,12 @@ class StatsController < ApplicationController
    @week = Date.today - 7
      # @days = Day.where("date > #{Date.today} AND date < #{Date.today - 7} ")
 
-     @days = Day.where(user: current_user)
+   @days = Day.where(user: current_user)
 
-     @pains = {}
-     Pain::SYMPTOMS.each do |symptom|
-      @pains[symptom] = {r: 0}
-     end
+   @pains = {}
+   Pain::SYMPTOMS.each do |symptom|
+    @pains[symptom] = {r: 0}
+   end
 
      @days.each do |day|
       day.pains.each do |pain|
@@ -126,7 +126,7 @@ class StatsController < ApplicationController
        date = Date.today - i
        day_name = date.strftime("%A")
        @day_names << day_name
-       exercise_time = Day.find_by(date: date)&.exercise&.time
+       exercise_time = Day.find_by(date: date, user: current_user)&.exercise&.time
        @times << exercise_time
      end
 
@@ -148,7 +148,7 @@ class StatsController < ApplicationController
        date = Date.today - i
        day_name = date.strftime("%A")
        @day_names << day_name
-       sleep_hours = Day.find_by(date: date)&.sleep&.hours
+       sleep_hours = Day.find_by(date: date, user: current_user)&.sleep&.hours
        @hours << sleep_hours
      end
 
