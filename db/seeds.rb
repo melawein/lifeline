@@ -62,9 +62,48 @@ puts 'Creating 30 fake days...'
         day: day
         )
     end
-
-
 end
+
+puts 'Creating 10 fake entries...'
+# 5.times do |i|
+#   i += 1
+#   day = Day.create(
+#     user: gab,
+#     date: today - i
+#     )
+# end
+  journal = Journal.create!(
+    title: 'First day',
+    text: 'Today is the first day i am using lifeline..I am a bit worried but excited to try something new.',
+    user: gab
+    # created_at: day
+    )
+  journal = Journal.create(
+    title: 'What a weird day',
+    text: 'Today was a really hard day at work and I just felt really weird by the time I got home. I was not really sure how to feel when I got home',
+    # created_at: day
+    user: gab
+    )
+  journal = Journal.create(
+    title: 'THIS WAS THE CRAZIEST DAY',
+    text: 'THESE BUS DRIVERS ARE TRULY UNBELIEVABLE!!!! I watched this crazy bus driver hit a scooter on the way to work today, how is this possible and I can only imagine how often this can happen!!!',
+    # created_at: day
+    user: gab
+    )
+  journal = Journal.create(
+    title: 'Feeling greay',
+    text: 'Today was awesome, I feel like I really accomplished something today, my boss seemed really happy with me and I could not be happier how this day went',
+    # created_at: day
+    user: gab
+    )
+  journal = Journal.create(
+    title: 'Anxiety all over again',
+    text: 'Sometimes I really feel like things are great but then they all seem to change. I am struggling but I know that I can get better!',
+    # created_at: day
+    user: gab
+    )
+
+
 puts 'Finished!'
 
 

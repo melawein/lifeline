@@ -1,14 +1,10 @@
 <h3 class="mood-stat">Monthly Mood Recap</h3>
 
-<div class="stats-bar justify-content-around">
-  <%= link_to "Mood", mood_stats_path, class: 'btn btn-outline-primary' %>
-  <%= link_to "Pain", pain_stats_path, class: 'btn btn-outline-danger' %>
-  <%= link_to "Exercise", exercise_stats_path, class: 'btn btn-outline-warning' %>
-  <%= link_to "Sleep", sleep_stats_path, class: 'btn btn-outline-info'  %>
-</div>
+<%= render 'shared/statswipe' %>
+
 <div class="hold-canvas">
 
-<canvas id="myChart" height="400"
+<canvas id="myChart" height="400" width="335"
   data-final-moods="<%= @final_moods.to_json %>"></canvas>
 </div>
 <%= javascript_pack_tag 'chartjs' %>
@@ -23,7 +19,7 @@
            <!-- <div class="mood-3"> -->
 
             <p><i class="fas fa-square <%= mood_array[0] %>"></i>
-              <%= mood_array[0] %>: <%= mood_array[1] %>x </p>
+              <%= mood_array[0].upcase %>: <span class="number-bold"><%= mood_array[1] %>x </span></p>
             <!-- </div> -->
         </div>
 

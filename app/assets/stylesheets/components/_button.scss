@@ -12,6 +12,13 @@
 
 }
 
+.back-but {
+  color: white;
+      font-size: 27px;
+      text-align: center;
+
+}
+
 .fa-key {
   color: white;
   margin: 10px;
@@ -40,7 +47,9 @@
   margin-left: 5px;
   font-size: 18px;
   text-align: center;
-  padding: 4px;
+
+  height: 16px;
+ 
   font-family: 'Comfortaa', cursive;
 
 }
@@ -169,5 +178,45 @@ vertical-align: center;
 }
 
 
+.upload-video {
+  width: 100px;
+  height: 100px;
+  font-size: 0;
+  background-image: linear-gradient(270deg, #028efb, #88cafc);
+  border: 0;
+  border-radius: 57px;
+  margin: 18px;
+  outline: none;
+  position:absolute;
+bottom: 315px;
+    left: 132px;
+}
 
+.video-done {
+ background-image: linear-gradient(270deg, #028efb, #88cafc);
+  padding: 5px 10px;
+  opacity: 0.7;
+  border-radius: 5px;
+  text-align: center;
+  //border: 3px solid;
+  font-weight: bold;
+  width: 80px;
+  position:absolute;
+   top: 670px;
+    font-size: 18px;
+    height: 50px;
+    color: white;
+  a {
+
+  color: white;
+  }
+}
+
+.video-icon-new {
+     position: absolute;
+    bottom: 357px;
+    left: 175px;
+    color: white;
+    font-size: 50px;
+}
 

@@ -121,7 +121,7 @@ text-align: center;
 }
 
 #pain-name {
-  font-weight: bold;
+  font-weight: 800;
   color: $pain;
   text-transform: uppercase;
   font-family: 'Raleway', sans-serif;
@@ -131,7 +131,7 @@ text-align: center;
 
 
 #ex-name {
-  font-weight: bold;
+  font-weight: 800;
   color: $exercise;
   text-transform: uppercase;
   font-family: 'Raleway', sans-serif;
@@ -144,6 +144,7 @@ text-align: center;
   color: $mood;
   text-transform: uppercase;
   font-family: 'Raleway', sans-serif;
+  font-weight: 800;
 
 
 }
@@ -153,6 +154,7 @@ text-align: center;
   color: $sleep;
   text-transform: uppercase;
   font-family: 'Raleway', sans-serif;
+  font-weight: 800;
 
 
 }
@@ -162,6 +164,8 @@ text-align: center;
   color: $pain;
   text-transform: uppercase;
   font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+
 
 
 }
@@ -171,6 +175,7 @@ text-align: center;
   color: $exercise;
   text-transform: uppercase;
   font-family: 'Raleway', sans-serif;
+  font-weight: 600;
 
 
 }
@@ -180,6 +185,8 @@ text-align: center;
   text-transform: uppercase;
   font-family: 'Raleway', sans-serif;
   margin-bottom: 2px !important;
+  font-weight: 600;
+
 
 
 }
@@ -188,6 +195,8 @@ text-align: center;
   color: $sleep;
   text-transform: uppercase;
   font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+
 
 
 }
