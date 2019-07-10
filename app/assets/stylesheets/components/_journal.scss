@@ -61,7 +61,9 @@ border: none;
   color: white;
    font-family: 'Raleway', sans-serif;
    font-size: 18px;
-
+background-image: linear-gradient(270deg, #028efb, #88cafc);
+border:none;
+height: 50px;
 }
 
 
@@ -149,6 +151,7 @@ min-height: calc(100vh - 90px);
 max-height: 450px;
 overflow: scroll;
   border-top: solid 1px #d1ccca;
+  margin-top: 40px;
 
 }
 
@@ -284,7 +287,7 @@ vertical-align: center;
   position: absolute;
   top:0;
 
-  left: 230px;
+  left: 215px;
 }
 
 
@@ -303,6 +306,7 @@ vertical-align: center;
 .inout-method {
   text-align: center;
   margin-bottom: 20px;
+  margin-top: 20px;
 }
 
 
@@ -315,4 +319,7 @@ min-height: calc(100vh - 90px);
 
 .video-player {
   width: 100vw;
+  height: 50vh;
+      position: absolute;
+    bottom: 242px;
 }
