@@ -9,6 +9,37 @@
   background-size: cover;
   background-position: center;
   // height: calc(100vh - 60px);
-
   height: 415px;
+}
+
+
+.log-in-background {
+  background: linear-gradient(#F9CBB8 0%, #FFFFFF 65%) no-repeat 50% 50% / 100% 100%;
+  padding: 15px;
+  h2 {
+    color: white;
+  font-family: 'Comfortaa', cursive;
+
+  }
+}
+
+.log-in-image {
+   background-size: cover;
+  background-position: center;
+  height: 350px;
+}
+
+.log-in-info {
+    font-family: 'Raleway', sans-serif;
+
+}
+
+.log-in-btn {
+  border: 1px solid black !important;
+}
+
+.sign-up-background {
+  background: linear-gradient(144deg, #F9CBB8 37%, #FFFFFF 100%) no-repeat 50% 50% / 100% 100%;
+
+  padding: 15px;
 }
