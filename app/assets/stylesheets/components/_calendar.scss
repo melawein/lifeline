@@ -63,6 +63,7 @@ color: white !important;
 //#text
 .table-striped tbody tr:nth-of-type(odd) {
     background-color: white !important;
+    height:60px;
 }
 
 
@@ -81,8 +82,9 @@ color: white !important;
 
 
 .calendar-heading {
-  padding-bottom: 12px;
+height: 30px;
   text-align: center;
+
 }
 
 
