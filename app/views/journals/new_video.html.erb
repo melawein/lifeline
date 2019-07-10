@@ -1,5 +1,10 @@
- <%= simple_form_for(@journal, url: create_video_journals_path, method: :post) do |f| %>
-    <%= f.input :video, input_html: { class: 'd-none' }, label_html: { class: 'upload-video'}, label: 'Record' %>
+<div class="new-vid-back">
+  <h3 class="video-journal">Video Journal</h3>
+<h5 class="add-entry">Tap to add an entry</h5>
+<%= simple_form_for(@journal, url: create_video_journals_path, method: :post) do |f| %>
+    <%= f.input :video, input_html: { class: 'd-none' }, label_html: { class: 'upload-video button-add-icon'}, label: 'Record' %>
+    <i class="fas fa-video video-icon-new"></i>
     <%= f.input :video_cache, as: :hidden %>
-    <%= f.button :submit, "Done", class: "done-video-button"%>
+    <%= f.button :submit, "Done", class: "btn-block video-done "%>
 <% end %>
+</div>

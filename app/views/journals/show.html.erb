@@ -1,18 +1,36 @@
 <div class="show-background">
 
-<div class="journal-options d-flex bd-highlight mb-3">
+<div class="journal-options d-flex bd-highlight mb-3 align-items-center">
+  <%= link_to journals_path do %>
+<i class="far fa-arrow-alt-circle-left back-but mr-auto p-2 bd-highlight"></i>
+<% end %>
   <h6 class="show-date mr-auto p-2 bd-highlight"><%= @journal.created_at.strftime("%A, %B %eth, %Y") %></h6>
+
+<% if @journal.text %>
 
 <%= link_to edit_journal_path(@journal) do %>
 <i class="fas fa-pencil-alt journal-ed p-2 bd-highlight"></i>
+<% end %>
 <% end %>
 
 <%= link_to journal_path(@journal), method: :delete,
       data: { confirm: "Are you sure?" } do %>
 <i class="fas fa-trash journal-del p-2 bd-highlight"></i>
 <% end %>
+
+
 </div>
+<% if @journal.text %>
 <h5 class="show-title"><%= @journal.title %></h5>
 
 <p class="show-text"><%= @journal.text %></p>
+
+<% else %>
+<%#= cl_video_tag @journal.video_url.to_s, :controls  => true, :poster => true %>
+
+<video controls autoplay class="video-player">
+  <source src="<%= @journal.video_url.to_s  %>" type="video/mp4">
+</video>
+
+<% end %>
 </div>
