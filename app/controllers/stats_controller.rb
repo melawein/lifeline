@@ -38,13 +38,13 @@ class StatsController < ApplicationController
     y = y_array.sample
     mini_hash[:y] = y
     y_array.delete(y)
-    mini_hash[:r] = mini_hash[:r] * 5
+    mini_hash[:r] = mini_hash[:r] * 7
 
     @final_moods << mini_hash
   end
 
   @order_moods = @final_moods.map do |mood|
-    [mood[:feeling], (mood[:r] / 5)] if !mood[:r].zero?
+    [mood[:feeling], (mood[:r] / 7)] if !mood[:r].zero?
   end.compact.sort_by! { |array| array[1] }.reverse!
 
   @final_moods.sort_by! { |mood_hash| mood_hash[:feeling] }
@@ -94,12 +94,12 @@ class StatsController < ApplicationController
       y = y_array.sample
       mini_hash[:y] = y
       y_array.delete(y)
-      mini_hash[:r] = mini_hash[:r] * 5
+      mini_hash[:r] = mini_hash[:r] * 7
 
       @final_pains << mini_hash
     end
     @order_pains = @final_pains.map do |pain|
-      [pain[:symptom], (pain[:r] / 5)] if !pain[:r].zero?
+      [pain[:symptom], (pain[:r] / 7)] if !pain[:r].zero?
     end.compact.sort_by! { |array| array[1] }.reverse!
 
     @final_pains.sort_by! { |pain_hash| pain_hash[:symptom] }
