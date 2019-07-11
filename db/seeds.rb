@@ -38,7 +38,7 @@ puts 'Creating 30 fake days...'
     user: gab,
     date: today - i
     )
-    2.times do
+    1.times do
       mood = Mood.create(
         feeling: ["Great", "Good", "Okay", "Sad", "Angry", "Anxious"].sample,
         day: day
@@ -50,7 +50,7 @@ puts 'Creating 30 fake days...'
         day: day
         )
     end
-    2.times do
+    1.times do
       pain = Pain.create(
         symptom: ["Head", "Stomach", "Back", "Chest"].sample,
         day: day
