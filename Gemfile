@@ -20,7 +20,7 @@ gem "simple_calendar", "~> 2.0"
 gem 'event_cal', '~> 2.0', '>= 2.0.2'
 gem 'dotenv-rails', groups: [:development, :test]
 gem 'cloudinary', '~> 1.9.1'
-gem 'carrierwave', '~> 1.2'
+gem 'carrierwave', '~> 1.3'
 
 group :development do
   gem 'web-console', '>= 3.3.0'
